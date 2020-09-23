@@ -1,0 +1,1560 @@
+{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fnil Arial;}
+{\f1\fnil Arial Black;}{\f2\fnil Courier New;}{\f3\fnil Wingdings;}{\f4\fnil Symbol;}{\f5\fnil Arial Narrow;}
+{\f6\fnil Century Schoolbook;}{\f7\fnil Courier;}{\f8\fnil Bookshelf Symbol 1;}}
+{\colortbl\red0\green0\blue0;\red255\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;\red255\green255\blue0;\red255\green0\blue255;\red128\green0\blue128;\red128\green0\blue0;\red0\green255\blue0;\red0\green255\blue255;\red0\green128\blue128;\red0\green0\blue128;\red255\green255\blue255;\red192\green192\blue192;\red128\green128\blue128;}
+\paperw12240\paperh15840\margl1880\margr1880\margt1440\margb1440{\keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Einleitung}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} Einleitung}}\plain\f1\fs28\cf0\b Inet32 Referenz\par
+\plain\f2\fs20\cf0\uldb Einbindung\plain\f2\fs20\cf0\v Einbindung\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Klassen-\'dcbersicht\plain\f0\fs20\cf0\v Klassen_Uebersicht\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Einleitung\par
+\plain\f2\fs20\cf0 In diesem Dokument soll die Funktionsweise der ActiveX-Schnittstelle erkl\'e4rt und dokumentiert wer\plain\f2\fs20\cf0 den. Eine vielzahl von Beispielen soll das Verst\'e4ndnis zur Benutzung vereinfachen. Grunds\'e4tzlich \plain\f2\fs20\cf0 stellt diese Klassen Bibliothek die M\'f6glichkeit zur Verf\'fcgung Dokumente (Objekte und/oder Dateien\plain\f2\fs20\cf0 ) von einem Internet bzw Intranet Servers herunterzuladen. Was mit den heruntergeladenden Dokumen\plain\f2\fs20\cf0 ten dann weiter geschieht ist ganz dem Entwickler \'fcberlassen. Diese Klassen Bibliothek unterst\'fctz\plain\f2\fs20\cf0  zur Zeit die Protokolle "\plain\f2\fs20\cf0\i HTTP\plain\f2\fs20\cf0 ", "\plain\f2\fs20\cf0\i FTP\plain\f2\fs20\cf0 " und "\plain\f2\fs20\cf0\i FILE\plain\f2\fs20\cf0 "\par
+\par
+\plain\f2\fs20\cf0 Der wesentliche Vorteil dieser Klassenbibliothek gegen\'fcber der Klassenbibliothek "Internet Transf\plain\f2\fs20\cf0 er Controls" von Microsoft ist, das diese Klassebibliothek die Autorisierung \'fcber einer Windows N\plain\f2\fs20\cf0 T Dom\'e4ne beherscht, was den wesentlichen Vorteil hat diese Klassen auch im zusammenspiel mit eine\plain\f2\fs20\cf0 m Windows NT Server und eingeschaltetem NTLM (Windows NT LanManager) verwendet werden kann. Eine \plain\f2\fs20\cf0 weitere M\'f6glichkeit der Verwendung besteht \'fcber die Benutzung der Klassen \'fcber einen Proxy Server\plain\f2\fs20\cf0  der NTLM Autorisierung fordert, wie es in manchen Intranets der Fall ist.\par
+\par
+\plain\f1\fs20\cf0\b Einbindung\par
+\plain\f2\fs20\cf0 Eine kleine Anleitung wie die ActiveX-DLL in Visual Basic eingebunden wird, nat\'fcrlich kann die DL\plain\f2\fs20\cf0 L auch in alle anderen OLE \'fcnterst\'fctzenden Programmiersprachen eingebunden werden. Schlagen Sie f\plain\f2\fs20\cf0 \'fcr die vorgehensweise bitte in der Dokumentation ihrer Programmiersprache nach. (\plain\f2\fs20\cf0\uldb Siehe Einbindung\plain\f2\fs20\cf0\v Einbindung\plain\f2\fs20\cf0 )\par
+\par
+\plain\f1\fs20\cf0\b Klassen \'dcbersicht\par
+\plain\f2\fs20\cf0 Eine \'dcbersicht \'fcber die Schnittstellen k\'f6nnen Sie aus der \plain\f2\fs20\cf0\uldb Klassen \'dcbersicht\plain\f2\fs20\cf0\v Klassen_Uebersicht\plain\f2\fs20\cf0  ent\plain\f2\fs20\cf0 nehmen.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Klassen_Uebersicht}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} Klassen \'DCbersicht}}\plain\f1\fs28\cf0\b Klassen \'dcbersicht\par
+\plain\f2\fs20\cf0\uldb Einleitung\plain\f2\fs20\cf0\v Einleitung\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Einbindung\plain\f2\fs20\cf0\v Einbindung\plain\par\pard
+\par
+\plain\f2\fs20\cf0\b Globale Klassen\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb InetBuffer\plain\f2\fs20\cf0\v InetBuffer\plain\f2\fs20\cf0  (Speichert die empfangenden Daten zwischen)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v InetBuffer_Methoden\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetBuffer_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb InetProxy\plain\f2\fs20\cf0\v InetProxy\plain\f2\fs20\cf0  (Verwaltet Proxy Informationen)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetProxy_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb InetTimeout\plain\f2\fs20\cf0\v InetTimeout\plain\f2\fs20\cf0  (Verwaltet Timeout Values f\'fcr Anforderungen)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetTimeout_Eigenschaften\plain\par
+\par
+\plain\f2\fs20\cf0\b Protokoll Engine Klassen\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb HttpEngine\plain\f2\fs20\cf0\v HttpEngine\plain\f2\fs20\cf0  (Protokoll Klasse f\'fcr HTTP)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v HttpEngine_Methoden\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v HttpEngine_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Ereignisse\plain\f2\fs20\cf0\v HttpEngine_Ereignisse\plain\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb FtpEngine\plain\f2\fs20\cf0\v FtpEngine\plain\f2\fs20\cf0  (Protokoll Klasse f\'fcr FTP)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FtpEngine_Methoden\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FtpEngine_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb FileEngine\plain\f2\fs20\cf0\v FileEngine\plain\f2\fs20\cf0  (Protokoll Klasse f\'fcr FILE)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FileEngine_Methoden\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FileEngine_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Ereignisse\plain\f2\fs20\cf0\v FileEngine_Ereignisse\plain\par
+\par
+\plain\f2\fs20\cf0\b Header Klassen\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb HttpHeader\plain\f2\fs20\cf0\v HttpHeader\plain\f2\fs20\cf0  (Header Informationen zum HTTP Protokoll)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v HttpHeader_Eigenschaften\plain\par
+\plain\f2\fs20\cf0 \tab \plain\f2\fs20\cf0\uldb FileHeader\plain\f2\fs20\cf0\v FileHeader\plain\f2\fs20\cf0  (Datei Informationen zu Dateien)\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FileHeader_Methoden\plain\par
+\plain\f2\fs20\cf0 \tab \tab \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FileHeader_Eigenschaften\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl}}\plain\f1\fs28\cf0\b InetUrl\par
+\plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetUrl_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v InetUrl_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.InetEngine\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Klasse ist es m\'f6glich die komplexe Konstruktion von URLs (Unique Resource Locators) od\plain\f2\fs20\cf0 er URIs (Unique Resource Identifiers) zu bilden. Die erm\'f6glich sowohl das bilden, als auch das Pa\plain\f2\fs20\cf0 rsen von URLs so kann man z.B. schnell den Server Namen \'e4ndern, auf den die URL Verweisen soll od\plain\f2\fs20\cf0 er den Benutzernamen anpassen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Um schnell von einem String in dem sich die URLs befindet auf eine Repr\'e4sentation durch die InetU\plain\f2\fs20\cf0 RL Klasse zugelangen, weisen Sie der \plain\f2\fs20\cf0\uldb URL Eigenschaft\plain\f2\fs20\cf0\v InetUrl_Url\plain\f2\fs20\cf0  den String zu.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Domain\plain\f2\fs20\cf0\v InetUrl_Domain\plain\par
+\plain\f2\fs20\cf0\uldb Hostname\plain\f2\fs20\cf0\v InetUrl_Hostname\plain\par
+\plain\f2\fs20\cf0\uldb Hostport\plain\f2\fs20\cf0\v InetUrl_Hostport\plain\par
+\plain\f2\fs20\cf0\uldb Password\plain\f2\fs20\cf0\v InetUrl_Password\plain\par
+\plain\f2\fs20\cf0\uldb Path\plain\f2\fs20\cf0\v InetUrl_Path\plain\par
+\plain\f2\fs20\cf0\uldb Url\plain\f2\fs20\cf0\v InetUrl_Url\plain\par
+\plain\f2\fs20\cf0\uldb UrlPath\plain\f2\fs20\cf0\v InetUrl_UrlPath\plain\par
+\plain\f2\fs20\cf0\uldb Username\plain\f2\fs20\cf0\v InetUrl_Username\plain\par
+\par
+\par
+\par
+\par
+\par
+\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Beispiele}}\plain\f1\fs20\cf0\b Beispiel:\par
+\plain\f2\fs20\cf0 Private Sub Form_Load()\par
+\plain\f2\fs20\cf0 \tab Dim objUrl as New InetUrl\par
+\plain\f2\fs20\cf0 \tab objUrl = "http://www.t-online.de/archiv/Jan99.asp?day=now"\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von www.t-online.de\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl.Hostname\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von Jan99.asp\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl.Document\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von /archiv\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl.Path\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von /archiv/Jan99.asp?day=now\par
+\plain\f2\fs20\cf0 \tab Debug.Print Url.UrlPath\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von ?day=now\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl.Query\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ausgabe von http://www.t-online.de/archiv/Jan99.asp?day=now\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl\par
+\par
+\plain\f2\fs20\cf0 \tab 'Gleiche Ausgabe wie oben\par
+\plain\f2\fs20\cf0 \tab Debug.Print objUrl.Url\par
+\plain\f2\fs20\cf0 End Sub\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Url}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Url}}\plain\f1\fs28\cf0\b InetUrl.Url\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Url As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert eine absolute URL, die das Objekt repr\'e4sentiert bzw. weist dem Objekt e\plain\f2\fs20\cf0 ine absolute URL zu die repr\'e4sentiert werden soll.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Username}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Username}}\plain\f1\fs28\cf0\b InetUrl.Username\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Username As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft setzt oder liefert den Benutzernamen zur\'fcck. Bei der folgenden Url w\'e4re der Ben\plain\f2\fs20\cf0 utzername "mustermann": http://mustermann:pass@www.server.de/\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Eigenschaft Username kann automatisch Strings mit dem folgenden Aufbau Dom\'e4ne\\Benutzer erkenn\plain\f2\fs20\cf0 en und auswerten, d.h. es wird nur der Benutzernamen in das Objekt \'fcbernommen, die Dom\'e4nen Inform\plain\f2\fs20\cf0 ation wird verworfen.\par
+\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Domain\plain\f2\fs20\cf0\v InetUrl_Domain\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Password}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Password}}\plain\f1\fs28\cf0\b InetUrl.Password\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Password As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert bzw. setzt das Benutzerkennwort. Bei der folgenden Url w\'e4re das Kennwor\plain\f2\fs20\cf0 t "pass": http://mustermann:pass@www.server.de/\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Domain}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Domain}}\plain\f1\fs28\cf0\b InetUrl.Domain\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Domain As Object\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Eigenschaft Domain liefert oder setzt den Dom\'e4nen Namen einer Benutzerkennung.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Eigenschaft Domain erkennt automatisch Strings mit dem Aufbau Dom\'e4ne\\Benutzer und \'fcbernimmt n\plain\f2\fs20\cf0 ur den Dom\'e4nen Teil in das Objekt, die Benutzer Informationen werden verworfen.\par
+\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Username\plain\f2\fs20\cf0\v InetUrl_Username\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer}}\plain\f1\fs28\cf0\b InetBuffer\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v InetBuffer_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetBuffer_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v InetBuffer_Beispiele>e\plain\f2\fs20\cf0\v xamples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Durch diese Klasse wird es m\'f6glich gr\'f6\'dfere Daten Mengen im Arbeitsspeicher zwischen zu speichern.\plain\f2\fs20\cf0  So ist es auch m\'f6glich die Downgeloadeten Daten im Speicher zuhalten ohne diese gleich abholen z\plain\f2\fs20\cf0 u m\'fcssen. Dadurch erreicht man weniger Verz\'f6gerung da die Daten nicht st\'e4ndig abgeholt werden m\'fcs\plain\f2\fs20\cf0 sen.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb PeekData\plain\f2\fs20\cf0\v Topic334\plain\par
+\plain\f2\fs20\cf0\uldb GetData\plain\f2\fs20\cf0\v InetBuffer_GetData\plain\par
+\plain\f2\fs20\cf0\uldb SaveFile\plain\f2\fs20\cf0\v InetBuffer_SaveFile\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Data\plain\f2\fs20\cf0\v InetBuffer_Data\plain\par
+\plain\f2\fs20\cf0\uldb Length\plain\f2\fs20\cf0\v InetBuffer_Length\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.Beispiele}}\plain\f1\fs20\cf0\b Beispiel:\par
+\par
+\plain\f2\fs20\cf0 Private Sub Form_Load()\par
+\plain\f2\fs20\cf0 \tab Dim Buffer as New InetBuffer\par
+\plain\f2\fs20\cf0 \tab Buffer.AddData "Hallo Welt"\par
+\plain\f2\fs20\cf0 \tab \par
+\plain\f2\fs20\cf0 \tab Debug.Print "Bix max. 2.5MB des Buffers ausgeben"\par
+\plain\f2\fs20\cf0 \tab Debug.Print "Buffer Inhalt: " & Buffer\par
+\par
+\plain\f2\fs20\cf0 \tab Dim tmp as String\par
+\plain\f2\fs20\cf0 \tab Buffer.GetData tmp, 6\par
+\par
+\plain\f2\fs20\cf0 \tab 'Ab dem 6ten Zeichen bis Ende des Buffers ausgeben 'Welt'\par
+\plain\f2\fs20\cf0 \tab Debug.Print tmp\par
+\plain\f2\fs20\cf0 End Sub\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_Length}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.Length}}\plain\f1\fs28\cf0\b InetBuffer.Length\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetBuffer_Length\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Length As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist Schreibgesch\'fctzt und liefert die Anzahl der Bytes die sich in dem Buffer be\plain\f2\fs20\cf0 finden zur\'fcck.\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_GetData}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.GetData}}\plain\f1\fs28\cf0\b InetBuffer.GetData\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetBuffer\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .GetData Data As String, [Length As Long]\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode f\'fcllt den Ausgabe Parameter Data mit Werten aus dem Buffer und l\'f6scht diese dann im\plain\f2\fs20\cf0  Buffer.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx1755\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Data\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String der mit Daten gef\'fcllt werden soll.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Length\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, ein Long Wert der die L\'e4nge der Daten bestimmt die von Offset an kopiert werden, wird k\plain\f2\fs20\cf0 ein Parameter angegeben, werden die Daten von Offset bis Ende des Buffers in Data kopiert.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_Data}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.Data}}\plain\f1\fs28\cf0\b InetBuffer.Data\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetBuffer\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Data() As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liest nur Daten aus dem Buffer ohne Sie nach dem Lesen zu l\'f6schen. Diese Eigens\plain\f2\fs20\cf0 chaft funktioniert wie die \plain\f2\fs20\cf0\uldb PeekData\plain\f2\fs20\cf0\v Topic334\plain\f2\fs20\cf0  Methode.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Data Eigenschaft ist die Standard Eigenschaft der Klasse InetBuffer.\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine}}\plain\f1\fs28\cf0\b Inet32.HttpEngine\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v HttpEngine_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v HttpEngine_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Ereignisse\plain\f2\fs20\cf0\v HttpEngine_Ereignisse\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v HttpEngine_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.HttpEngine\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 In dieser Klasse ist das HTTP Protokoll implementiert. Zus\'e4tzlich wurde noch automatische Weiterl\plain\f2\fs20\cf0 eitung und Autorisierungs Mechanismen hinzugef\'fcgt so ist es z.B. m\'f6glich sich an einer Windows NT\plain\f2\fs20\cf0  Dom\'e4ne zu Autorisieren, in manchen Intranets sehr n\'fctzlich.\par
+\par
+\plain\f2\fs20\cf0 Benutzername und Kennwort f\'fcr die Autorisierung wird aus der URL entnommen z.B. \plain\f2\fs20\cf0\i "http://musterman\plain\f2\fs20\cf0\i n:pass@www.t-online.de/security.html"\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb OpenURL\plain\f2\fs20\cf0\v HttpEngine_OpenURL\plain\par
+\plain\f2\fs20\cf0\uldb Cancel\plain\f2\fs20\cf0\v HttpEngine_Cancel\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Buffer\plain\f2\fs20\cf0\v HttpEngine_Buffer\plain\par
+\plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v HttpEngine_Header\plain\par
+\plain\f2\fs20\cf0\uldb Methode\plain\f2\fs20\cf0\v HttpEngine_Methode\plain\par
+\plain\f2\fs20\cf0\uldb Proxy\plain\f2\fs20\cf0\v HttpEngine_Proxy\plain\par
+\plain\f2\fs20\cf0\uldb Resource\plain\f2\fs20\cf0\v HttpEngine_Resource\plain\par
+\plain\f2\fs20\cf0\uldb State\plain\f2\fs20\cf0\v HttpEngine_State\plain\par
+\plain\f2\fs20\cf0\uldb Timeout\plain\f2\fs20\cf0\v HttpEngine_Timeout\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Ereignisse}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Ereignisse}}\plain\f1\fs20\cf0\b Ereignisse\par
+\plain\f2\fs20\cf0\uldb Complete\plain\f2\fs20\cf0\v HttpEngine_Complete\plain\par
+\plain\f2\fs20\cf0\uldb Connected\plain\f2\fs20\cf0\v HttpEngine_Connected\plain\par
+\plain\f2\fs20\cf0\uldb Connecting\plain\f2\fs20\cf0\v HttpEngine_Connecting\plain\par
+\plain\f2\fs20\cf0\uldb Error\plain\f2\fs20\cf0\v HttpEngine_Error\plain\par
+\plain\f2\fs20\cf0\uldb HeaderReceived\plain\f2\fs20\cf0\v HttpEngine_HeaderReceived\plain\par
+\plain\f2\fs20\cf0\uldb Progress\plain\f2\fs20\cf0\v HttpEngine_Progress\plain\par
+\plain\f2\fs20\cf0\uldb Redirection\plain\f2\fs20\cf0\v HttpEngine_Redirection\plain\par
+\plain\f2\fs20\cf0\uldb Requesting\plain\f2\fs20\cf0\v HttpEngine_Requesting\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Beispiele}}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_OpenURL}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.OpenURL}}\plain\f1\fs28\cf0\b HttpEngine.Request\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .OpenURL(Resource As Variant, [Sync As Boolean = True], [Methode As String], [Data As Strin\plain\f2\fs20\cf0 g]) As InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann man ein HttpEngine Objekt dazu veranlassen eine Anfrage an einen Web Serv\plain\f2\fs20\cf0 er im Netzwerk zustellen und das in \plain\f2\fs20\cf0\i Resource\plain\f2\fs20\cf0  angegebende Dokument anzufordern.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Resource\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Eine URL, die ein Dokument im Netzwerk referenziert. Kann entweder eine Variable vom Typ String, \plain\f2\fs20\cf0 oder ein Objekt der Klasse \plain\f2\fs20\cf0\uldb InetURL\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0  sein.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Sync\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, Standard Wert ist True. Bestimmt die Art der Anforderung Syncron oder Asycron. Asycron \plain\f2\fs20\cf0 bedeutet das die Anforderung im Hintergrund durchgef\'fchrt wird.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Methode\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, Gibt die Methode an mit der das Dokument Resource angefordert werden soll. Bei HTTP sin\plain\f2\fs20\cf0 d folgende Werte erlaubt GET und HEAD. Der Standard Wert dieses Parameters ist GET\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Data\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional ein Daten Paket was zum Server hingeschickt wird. (f\'fcr sp\'e4tere Implementierung der POST \plain\f2\fs20\cf0 Methode)\cell\row
+}\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Nach Aufruf der Request Methode wird das \plain\f2\fs20\cf0\uldb Requesting\plain\f2\fs20\cf0\v HttpEngine_Requesting\plain\f2\fs20\cf0  Ereigniss ausgel\'f6st.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Buffer}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Buffer}}\plain\f1\fs28\cf0\b HttpEngine.Buffer\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Buffer As InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert ein \plain\f2\fs20\cf0\uldb InetBuffer\plain\f2\fs20\cf0\v InetBuffer\plain\f2\fs20\cf0  Objekt zur\'fcck, in diesem Objekt befindenden si\plain\f2\fs20\cf0 ch die zwischengespeicherten Daten die w\'e4hrend einer Anforderung empfangen wurden.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Header}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Header}}\plain\f1\fs28\cf0\b HttpEngine.Header\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Header As HttpHeader\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert ein \plain\f2\fs20\cf0\uldb HttpHeader\plain\f2\fs20\cf0\v HttpHeader\plain\f2\fs20\cf0  Objekt zur\'fcck das Informationen \'fcber das angef\plain\f2\fs20\cf0 orderte Dokument enth\'e4lt z.B. die Status Codes, Datum der letzten \'c4nderung, MIME Typ der Daten.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb HttpHeader\plain\f2\fs20\cf0\v HttpHeader\plain\f2\fs20\cf0 .\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_State}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.State}}\plain\f1\fs28\cf0\b HttpEngine.State\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .State As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert Auskunft \'fcber den aktuellen Zustand des Objektes.\par
+\par
+\plain\f2\fs20\cf0\b Sie k\'f6nnen folgende Konstanten zur Abfrage des Zustandes benutzen:\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpDocumentOk\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpInvalidLink\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpCanceledByUser\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpBlocking\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpTimeout\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpRedirectionFailed\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpWwwAuthorizationOverProxy\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpAuthorizationFailed\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpProxyAuthorizationFailed\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpClientError\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpServerError\par
+\plain\f4\fs20\cf0 \'b7 \plain\f2\fs20\cf0 httpInterpreterFailed\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader}}\plain\f1\fs28\cf0\b HttpHeader\par
+\plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v HttpHeader_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v HttpHeader_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.HttpHeader\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Klasse wird von der \plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v HttpEngine_Header\plain\f2\fs20\cf0  Eigenschaft eines \plain\f2\fs20\cf0\uldb HttpEngine\plain\f2\fs20\cf0\v HttpEngine\plain\f2\fs20\cf0  Objektes\plain\f2\fs20\cf0  zur\'fcckgegeben und beschreibt den Inhalt und den Zustand der empfangenden Daten in der \plain\f2\fs20\cf0\uldb Buffer\plain\f2\fs20\cf0\v Http\plain\f2\fs20\cf0\v Engine_Buffer\plain\f2\fs20\cf0  Eigenschaft der HttpEngine Klasse.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 F\'fcr weitere Informationen zu HTTP Headern lesen Sie in der RFC 1945 nach.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Hostname}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Hostname}}\plain\f1\fs28\cf0\b InetUrl.Hostname\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Hostname As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Hostname Eigenschaft gibt den Server Namen oder die IP Adresse zur\'fcck auf den die URL verweis\plain\f2\fs20\cf0 t bzw. setzt eine neue IP Adresse oder Server Namen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Wenn diese Eigenschaft nicht gesetzt wird liefert die \plain\f2\fs20\cf0\uldb URL\plain\f2\fs20\cf0\v InetUrl_Url\plain\f2\fs20\cf0  Eigenschaft eine \plain\f2\fs20\cf0\uldb relative UR\plain\f2\fs20\cf0\uldb L\plain\f2\fs20\cf0\v Relative_URL\plain\f2\fs20\cf0  zur\'fcck die nur aus dem \plain\f2\fs20\cf0\uldb UrlPath\plain\f2\fs20\cf0\v InetUrl_UrlPath\plain\f2\fs20\cf0  besteht.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Hostport}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Hostport}}\plain\f1\fs28\cf0\b InetUrl.Hostport\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Hostport As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert oder setzt einen Port, wenn mit der URL Eigenschaft eine URL zugewiesen\plain\f2\fs20\cf0  wurden ist und dort keine spezielle Portadresse angegeben wurden ist, werden die Standard Ports \plain\f2\fs20\cf0 f\'fcr das entsprechende Protokoll verwendet. Bei HTTP ist der Standard Port 80 und bei FTP ist der \plain\f2\fs20\cf0 Standard Port 21.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Wenn man dieser Eigenschaft eine 0 zuordnet, wird der Standard Port f\'fcr das benutzte Protokoll ve\plain\f2\fs20\cf0 rwendet.\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Protocol}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Protocol}}\plain\f1\fs28\cf0\b InetUrl.Protocol\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Protocol As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Legt oder setzt das benutzte Protokoll fest. Es werden folgende Protokolle akzeptiert, alle ander\plain\f2\fs20\cf0 en verursachen einen Laufzeitfehler bei der Zuweisung der Eigenschaft.\par
+\par
+\plain\f2\fs20\cf0\b Unterst\'fctze Protokolle:\par
+\plain\f4\fs20\cf0 \'b7\plain\f2\fs20\cf0  http\par
+\plain\f4\fs20\cf0 \'b7\plain\f2\fs20\cf0  https\par
+\plain\f4\fs20\cf0 \'b7\plain\f2\fs20\cf0  ftp\par
+\plain\f4\fs20\cf0 \'b7\plain\f2\fs20\cf0  gopher\par
+\plain\f4\fs20\cf0 \'b7\plain\f2\fs20\cf0  mail\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Query}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Query}}\plain\f1\fs28\cf0\b InetUrl.Query\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Query As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Query Eigenschaft setzt oder liefert den Query String. Beim setzen brauch kein extra voran ge\plain\f2\fs20\cf0 stelltes "?" benutzt werden. Beim auslesen der Query Eigenschaft wird immer ein ? der Query voran\plain\f2\fs20\cf0 gestellt.\par
+\par
+\plain\f2\fs20\cf0\b Beispiel:\plain\f2\fs20\cf0  Bei der folgenden URL 'http://www.t-online.de/search.cgi?index="test"' w\'fcrde die Query \plain\f2\fs20\cf0 Eigenschaft den Wert '?index="test"' zur\'fcck liefern.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Textmark}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Textmark}}\plain\f1\fs28\cf0\b InetUrl.Textmark\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Textmark As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Textmark Eigenschaft liefert bzw. setzt die Textmarke auf die im Dokument verweist wird. Beim\plain\f2\fs20\cf0  setzen wird keine vorangestellte '#' erwartet, bei der R\'fcckgabe wird diese immer vorangestellt.\par
+\par
+\plain\f2\fs20\cf0\b Beispiel:\plain\f2\fs20\cf0  Bei der folgenden URL 'http://www.t-online.de/index.htm#top' w\'fcrde die Textmark Eigensc\plain\f2\fs20\cf0 haft folgenden Wert zur\'fcckgeben '#top'.   \par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_UrlPath}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.UrlPath}}\plain\f1\fs28\cf0\b InetUrl.UrlPath\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .UrlPath As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die UrlPath Eigenschaft liefert oder setzt den gesammten UrlPath einer Url. Ein UrlPath ist alles\plain\f2\fs20\cf0  das was nach dem Servernamen durch einen Slash folgt.\par
+\par
+\plain\f2\fs20\cf0\b Beispiel:\plain\f2\fs20\cf0  Bei der folgenden URL 'http://www.t-online.de/aktuell/news.pl?date=now' w\'e4re der UrlPat\plain\f2\fs20\cf0 h gleich '/aktuell/news.pl?date=now'.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Document}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Document}}\plain\f1\fs28\cf0\b InetUrl.Document\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Document As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Document Eigenschaft liefert oder setzt den Dokumenten Namen auf den Verwiesen wird fest.\par
+\par
+\plain\f2\fs20\cf0\b Beispiel:\plain\f2\fs20\cf0  In der folgenden URL 'http://www.t-online.de/index.htm' w\'e4re der Dokumenten Name gleich\plain\f2\fs20\cf0  'index.htm'.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Wenn kein Dokumenten Name angegeben wird (\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Document = vbNullString) dann wird bei Http die \plain\f2\fs20\cf0 Standard Seite des Verzeichnisses (\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .\plain\f2\fs20\cf0\uldb Path\plain\f2\fs20\cf0\v InetUrl_Path\plain\f2\fs20\cf0 ) angefordert, in der Regel ist dies 'i\plain\f2\fs20\cf0 ndex.htm' oder 'default.htm'.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Relative_URL}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} Relative URL}}\plain\f1\fs20\cf0\b Relative URL\par
+\plain\f2\fs20\cf0 Eine relative URL ist ein Verweis auf ein Dokument im Internet bei dem s\'e4mtliche Angaben \'fcber Ser\plain\f2\fs20\cf0 ver Namen, Port oder Benutzerkennung fehlen. Eine relative URL kann nur mit einer absoluten URL a\plain\f2\fs20\cf0 ufgel\'f6st werden, die die erforderlichen Informationen enth\'e4lt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetUrl_Path}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetUrl.Path}}\plain\f1\fs28\cf0\b InetUrl.Path\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v InetUrl\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Path As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Weist oder liefert den Verzeichnis Namen, auf den die URL referenziert. Wenn ein Path ein vbNullS\plain\f2\fs20\cf0 tring zugewiesen wird, dann wird angenommen das Path auf ein Root Verzeichnis weist ('/').\par
+\par
+\plain\f2\fs20\cf0\b Beispiel:\plain\f2\fs20\cf0  In der folgenden Url 'http://www.t-online.de/sport/news.htm' w\'e4re '/sport' der Path.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Einbindung}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} Einbindung}}\plain\f1\fs28\cf0\b Einbindung der ActiveX-DLL in Visual Basic\par
+\plain\f2\fs20\cf0\uldb Einleitung\plain\f2\fs20\cf0\v Einleitung\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Klassen-\'dcbersicht\plain\f0\fs20\cf0\v Klassen_Uebersicht\plain\par\pard
+\par
+\plain\f2\fs20\cf0 Wenn Sie sich in Visual Basic befinden klicken Sie auf den Men\'fcpunkt "Projekt/Verweise" hier find\plain\f2\fs20\cf0 en Sie nun eine Liste aller Registrierten Klassen Bibliotheken. W\'e4hlen Sie nun "Inet32 ActiveX-DL\plain\f2\fs20\cf0 L" aus der Liste aus. Falls Sie die DLL Datei zum ersten mal ausw\'e4hlen befindet sie sich noch nic\plain\f2\fs20\cf0 ht in der Auflistung, da sie nicht registriert ist. In diesem Fall klicken Sie auf "Durchsuchen" \plain\f2\fs20\cf0 und w\'e4hlen die DLL Datei "inet32.dll" von Hand aus. Danach klicken sie auf "OK" um das Fenster zu\plain\f2\fs20\cf0 schlie\'dfen. So das war's schon, jetzt befindet sich die Klassen Bibliothek in ihrem Projekt wieder\plain\f2\fs20\cf0 . Sie k\'f6nnen nun die Klassen und Objekte so benutzen als w\'e4ren sie in ihrem Projekt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Cancel}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Cancel}}\plain\f1\fs28\cf0\b HttpEngine.Cancel\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Cancel\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode bringt man das Objekt dazu eine laufende Anforderung abzubrechen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Nach Aufruf der Methode wird \plain\f2\fs20\cf0\uldb State\plain\f2\fs20\cf0\v HttpEngine_State\plain\f2\fs20\cf0  auf einen Wert gesetzt der Signalisiert das di\plain\f2\fs20\cf0 e Anforderung vom Benutzer abgebrochen wurden ist. Das \plain\f2\fs20\cf0\v HttpEngine_Complete\plain\f2\fs20\cf0 Error Ereignis tritt ei\plain\f2\fs20\cf0 n.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetTimeout}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetTimeout}}\plain\f1\fs28\cf0\b Inet32.InetTimeout\par
+\plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetTimeout_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v InetTimeout_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.InetTimeout\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Klasse dient zur Einstellung der Timeout Zeiten f\'fcr Connection und Data, d.h. das die Klass\plain\f2\fs20\cf0 e ein maximales Zeit Intervall f\'fcr die Verbindung und ein maximales Zeitintervall f\'fcr die Pause z\plain\f2\fs20\cf0 wischen zwei Paketen definiert.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetTimeout_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetTimeout.Beispiele}}\plain\f1\fs20\cf0\b Beispiel:\par
+\plain\f2\fs20\cf0 Public Sub Form_Load()\par
+\plain\f2\fs20\cf0 \tab 'Variablen deklaration\par
+\plain\f2\fs20\cf0 \tab Dim objEngine As New InetEngine\par
+\plain\f2\fs20\cf0 \tab Dim objTimeout As New InetTimeout\par
+\plain\f2\fs20\cf0 \tab objTimeout.Connection = 20\par
+\plain\f2\fs20\cf0 \tab objTimeout.Data = 10\par
+\par
+\plain\f2\fs20\cf0 \tab 'Timeout als Objekt \'fcbergeben\par
+\plain\f2\fs20\cf0 \tab Set objEngine.Timeout = objTimeout\par
+\par
+\plain\f2\fs20\cf0 \tab 'Timeout durch Eigenschaft \'e4ndern\par
+\plain\f2\fs20\cf0 \tab objEngine.Timeout.Connection = 60\par
+\plain\f2\fs20\cf0 \tab objEngine.Timeout.Data = 30\par
+\plain\f2\fs20\cf0 End Sub\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetTimeout_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetTimeout.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Connection\plain\f2\fs20\cf0\v InetTimeout_Connection\plain\par
+\plain\f2\fs20\cf0\uldb Data\plain\f2\fs20\cf0\v InetTimeout_Data\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetTimeout_Connection}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetTimeout.Connection}}\plain\f1\fs28\cf0\b InetTimeout.Connection\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetTimeout\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Connection As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode definiert die Zeit, wie lange versucht werden soll die Verbindung zu einem Server a\plain\f2\fs20\cf0 ufzubauen, nach ablauf der Zeit wird in der Regel ein Timeout Ereignis ausgel\'f6st.\par
+\par
+\plain\f2\fs20\cf0 Die Eigenschaft liefert und erwartet ein Wert der in Millisekunden angegeben ist.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetTimeout_Data}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetTimeout.Data}}\plain\f1\fs28\cf0\b InetTimeout.Data\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetTimeout\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Data As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode definiert den maximalen Zeitintervall der zwischen zwei Paketen auftreten darf, wir\plain\f2\fs20\cf0 d dieser \'fcberschritten wird in der Regel ein Timeout Ereignis ausgel\'f6st und die Anforderung abgeb\plain\f2\fs20\cf0 rochen. Bei langsamen Verbindung (wie z.B. bei ISDN oder Modem Verbindungen) sollten Sie h\'f6here W\plain\f2\fs20\cf0 erte nehmen.\par
+\par
+\plain\f2\fs20\cf0 Die Eigenschaft liefert und erwartet ein Wert der in Millisekunden angegeben ist.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader}}\plain\f1\fs28\cf0\b Inet32.FileHeader\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FileHeader_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FileHeader_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v FileHeader_Beispiele>e\plain\f2\fs20\cf0\v xamples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.FileHeader\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Klasse beschreibt eine Datei die mit einem Objekt der Klasse  \plain\f2\fs20\cf0\uldb FileEngin\plain\f2\fs20\cf0\v FileEngine\plain\f2\fs20\cf0 e angeford\plain\f2\fs20\cf0 ert wurden ist. Diese Klasse wird durch die Eigenschaft \plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v FileEngine_Header\plain\f2\fs20\cf0  eines Objektes vo\plain\f2\fs20\cf0 m Typ \plain\f2\fs20\cf0\uldb FileEngine\plain\f2\fs20\cf0\v FileEngine\plain\f2\fs20\cf0  zur\'fcckgeben.\par
+\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb IsArchive\plain\f2\fs20\cf0\v FileHeader_IsArchive\plain\par
+\plain\f2\fs20\cf0\uldb IsHidden\plain\f2\fs20\cf0\v FileHeader_IsHidden\plain\par
+\plain\f2\fs20\cf0\uldb IsNormal\plain\f2\fs20\cf0\v FileHeader_IsNormal\plain\par
+\plain\f2\fs20\cf0\uldb IsReadonly\plain\f2\fs20\cf0\v FileHeader_IsReadonly\plain\par
+\plain\f2\fs20\cf0\uldb IsSystem\plain\f2\fs20\cf0\v FileHeader_IsSystem\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Attributes\plain\f2\fs20\cf0\v FileHeader_Attributes\plain\par
+\plain\f2\fs20\cf0 Header\par
+\plain\f2\fs20\cf0\uldb Length\plain\f2\fs20\cf0\v FileHeader_Length\plain\par
+\plain\f2\fs20\cf0\uldb Message\plain\f2\fs20\cf0\v FileHeader_Message\plain\par
+\plain\f2\fs20\cf0\uldb Modified\plain\f2\fs20\cf0\v FileHeader_Modified\plain\par
+\plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v FileEngine_OpenURL\plain\par
+\plain\f2\fs20\cf0\uldb Status\plain\f2\fs20\cf0\v FileHeader_Status\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Beispiele}}\plain\f1\fs20\cf0\b Beispiele:\par
+\par
+\plain\f2\fs20\cf0 Private Sub Form_Load\par
+\plain\f2\fs20\cf0 \tab 'Variablen deklaration\par
+\plain\f2\fs20\cf0 \tab Dim Engine As New FileEngine\par
+\plain\f2\fs20\cf0 \tab Dim Head As FileHeader\par
+\par
+\plain\f2\fs20\cf0 \tab 'Dokument anfordern\par
+\plain\f2\fs20\cf0 \tab Engine.Request "c:\\autoexec.bat"\par
+\par
+\plain\f2\fs20\cf0 \tab 'Warten bis Datei vollst\'e4ndig geladen wurden ist\par
+\plain\f2\fs20\cf0 \tab Do While Engine.Blocking\par
+\plain\f2\fs20\cf0 \tab \tab DoEvents\par
+\plain\f2\fs20\cf0 \tab Loop\par
+\par
+\plain\f2\fs20\cf0 \tab 'Header Objekt zuweisen\par
+\plain\f2\fs20\cf0 \tab Set Head = Engine.Header\par
+\par
+\plain\f2\fs20\cf0 \tab 'Alle Informationen ausgeben\par
+\plain\f2\fs20\cf0 \tab 'Kurzform: Debug.Print Head\par
+\plain\f2\fs20\cf0 \tab Debug.Print Head.Header   \par
+\plain\f2\fs20\cf0 \tab \par
+\plain\f2\fs20\cf0 \tab 'Resource ausgeben\par
+\plain\f2\fs20\cf0 \tab Debug.Print Head.Resource\par
+\par
+\plain\f2\fs20\cf0 \tab 'Direkt von der Engine Informationen ausgeben\par
+\plain\f2\fs20\cf0 \tab Debug.Print "Request beendet mit: " & Engine.Header.Status\par
+\plain\f2\fs20\cf0 End Sub\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Attributes}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Attributes}}\plain\f1\fs28\cf0\b FileHeader.Attributes\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Attributes As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Eigenschaft Attributes liefert eine Ganzzahl die alle gesetzten Attribute enth\'e4lt, weitere In\plain\f2\fs20\cf0 formationen hierzu finden Sie in der MSDN unter der Methode "GetAttr" der VB Runtime Klassen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Um gezielt ein spezielles Attribut heraus zufiltern benutzen Sie die \plain\f2\fs20\cf0\uldb IsNorma\plain\f2\fs20\cf0\v FileHeader_IsNormal\plain\f2\fs20\cf0 l,\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb IsArchive\plain\f2\fs20\cf0\v FileHeader_IsArchive\plain\f2\fs20\cf0 , \plain\f2\fs20\cf0\uldb IsSystem\plain\f2\fs20\cf0\v FileHeader_IsSystem\plain\f2\fs20\cf0 , \plain\f2\fs20\cf0\uldb IsHidden\plain\f2\fs20\cf0\v FileHeader_IsHidden\plain\f2\fs20\cf0 , und \plain\f2\fs20\cf0\uldb IsR\plain\f2\fs20\cf0\uldb eadonly\plain\f2\fs20\cf0\v FileHeader_IsReadonly\plain\f2\fs20\cf0  Methoden des Objektes.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine}}\plain\f1\fs28\cf0\b Inet32.FileEngine\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FileEngine_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FileEngine_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Ereignisse\plain\f2\fs20\cf0\v FileEngine_Ereignisse\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v FileEngine_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.FileEngine\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Klasse kapselt das File Protokoll, welches Lokale Dateien wie Dateien aus dem Netzwerk beha\plain\f2\fs20\cf0 ndelt. Im Prinzip macht diese Klasse nichts anderes als Dateien in den Speicher zuladen.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v FileEngine_OpenURL\plain\par
+\plain\f2\fs20\cf0\uldb CancelRequest\plain\f2\fs20\cf0\v FileEngine_Cancel\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Blocking\plain\f2\fs20\cf0\v FileEngine_Blocking\plain\par
+\plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v FileEngine_Header\plain\par
+\plain\f2\fs20\cf0\uldb Response\plain\f2\fs20\cf0\v FileEngine_Buffer\plain\par
+\plain\f2\fs20\cf0\uldb State\plain\f2\fs20\cf0\v FileEngine_State\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Ereignisse}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Ereignisse}}\plain\f1\fs20\cf0\b Ereignisse\par
+\plain\f2\fs20\cf0\uldb Complete\plain\f2\fs20\cf0\v FileEngine_Complete\plain\par
+\plain\f2\fs20\cf0\uldb Progress\plain\f2\fs20\cf0\v FileEngine_Progress\plain\par
+\plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v FileEngine_Request1\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Beispiele}}\plain\f1\fs20\cf0\b Beispiel:\par
+\par
+\plain\f2\fs20\cf0 Private Sub Form_Load()\par
+\plain\f2\fs20\cf0 \tab 'Variablen deklaration\par
+\plain\f2\fs20\cf0 \tab Dim objEngine As New FileEngine\par
+\plain\f2\fs20\cf0 \tab Dim objUrl As New InetUrl\par
+\par
+\plain\f2\fs20\cf0 \tab 'Dokument anfordern\par
+\plain\f2\fs20\cf0 \tab objUrl = "file://c:\\config.sys"\par
+\plain\f2\fs20\cf0 \tab objEngine.Request objUrl\par
+\par
+\plain\f2\fs20\cf0 \tab 'Warten bis anforderung zu Ende ist\par
+\plain\f2\fs20\cf0 \tab Do While objEngine.Blocking\par
+\plain\f2\fs20\cf0 \tab \tab DoEvents\par
+\plain\f2\fs20\cf0 \tab Loop\par
+\par
+\plain\f2\fs20\cf0 \tab 'Wenn Dokument erfolgreich empfangen, \par
+\plain\f2\fs20\cf0 \tab 'dann im Debug Fenster ausgeben\par
+\plain\f2\fs20\cf0 \tab If objEngine.Header.Status = 200 Then\par
+\plain\f2\fs20\cf0 \tab \tab Debug.Print objEngine.Response\par
+\plain\f2\fs20\cf0 \tab Else\par
+\plain\f2\fs20\cf0 \tab \tab Debug.Print "Es ist ein Fehler " & _\par
+\plain\f2\fs20\cf0 \tab \tab             "aufgetreten."\par
+\plain\f2\fs20\cf0 \tab End If\par
+\plain\f2\fs20\cf0 End Sub\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_OpenURL}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.OpenURL}}\plain\f1\fs28\cf0\b FileEngine.OpenURL\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .OpenURL(Resource as Variant, [Sync As Boolean]) As InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann man ein Objekt dazu veranlassen eine lokale Datei in den Arbeitsspeicher \plain\f2\fs20\cf0 zuladen. Diese Methode verursacht einen Laufzeitfehler wenn eine andere Datei gerade in den Speic\plain\f2\fs20\cf0 her geladen wird. Warten Sie solange mit der Anforderung bis die Eigenschaft \plain\f2\fs20\cf0\uldb Blockin\plain\f2\fs20\cf0\v FileEngine_Bl\plain\f2\fs20\cf0\v ocking\plain\f2\fs20\cf0 g den Wert False annimmt.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Resource\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Verweis der auf eine Datei auf der lokalen Festplatte verweist. Die Variable kann vom Typ Str\plain\f2\fs20\cf0 ing, oder ein Objekt der Klasse \plain\f2\fs20\cf0\uldb InetUrl\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0  sein.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Sync\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, Gibt an ob der Vorgang Synchron oder Asycron statt findet. Asychron bedeutet das die Da\plain\f2\fs20\cf0 tei im Hintergrund geladen wird.\cell\row
+}\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Nach Aufruf der Request Methode wird das \plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v FileEngine_Request1\plain\f2\fs20\cf0  Ereigniss ausgel\'f6st, nach bee\plain\f2\fs20\cf0 nden der Anforderung ob bei Erfolg oder im Fehlerfall wird das \plain\f2\fs20\cf0\uldb Complet\plain\f2\fs20\cf0\v FileEngine_Complete\plain\f2\fs20\cf0 e Ereign\plain\f2\fs20\cf0 iss ausgel\'f6st.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Cancel}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Cancel}}\plain\f1\fs28\cf0\b FileEngine.Cancel\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Cancel\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Operation kann man das Objekt dazu veranlassen eine laufende Anfrage abzubrechen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Nach Aufruf der Methode wird das \plain\f2\fs20\cf0\uldb Complete\plain\f2\fs20\cf0\v FileEngine_Complete\plain\f2\fs20\cf0  Ereigniss ausgel\'f6st.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Blocking}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Blocking}}\plain\f1\fs28\cf0\b FileEngine.Blocking\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Blocking As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft zeigt an ob das Objekt gerade eine Datei von der Festplatte l\'e4dt, wenn der Wert\plain\f2\fs20\cf0  True entspricht und man probiert die Request Methode aufzurufen f\'fchrt dies zu einem Laufzeitfehl\plain\f2\fs20\cf0 er.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Complete}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Complete}}\plain\f1\fs28\cf0\b FileEngine.Complete\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Complete()\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Wenn dieses Ereignis Eintritt ist die angeforderte Datei vollst\'e4ndig in den Speicher geladen wurd\plain\f2\fs20\cf0 en. Das Objekt ist wieder bereit f\'fcr eine neue Anforderung durch den Aufruf der \plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v FileEngine\plain\f2\fs20\cf0\v _OpenURL\plain\f2\fs20\cf0  Methode.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Request1}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Request}}\plain\f1\fs28\cf0\b FileEngine.Request\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt_\plain\f2\fs20\cf0 Request(ByVal Resource As InetUrl)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereigniss tritt nach dem Aufruf der Request Methode ein und signalisiert. Das die Jetzt mi\plain\f2\fs20\cf0 t dem Laden der Datei angefangen wird.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Resource\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Eine Objekt vom Typ \plain\f2\fs20\cf0\uldb InetUrl\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0 , verweist auf das Dokument das angefordert wird.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Progress}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Progress}}\plain\f1\fs28\cf0\b FileEngine.Progress\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Progress(ByVal bytesReceived As Long, ByVal bytesTotal As Long)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereignis signalisiert das wieder ein Teil der Datei in den Speicher geladen wurde. Aber di\plain\f2\fs20\cf0 e Anforderung noch nicht vollst\'e4ndig ist. Mit diesem Ereignis kann man z.B. eine Fortschrittsanze\plain\f2\fs20\cf0 ige realisieren.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 bytesReceived\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Long Wert, der die Anzahl die schon gelesenden Bytes enth\'e4lt\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 bytesTotal\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Long Wert, der die Anzahl die gesammte Gr\'f6\'dfe der Datei angibt\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Header}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Header}}\plain\f1\fs28\cf0\b FileEngine.Header\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Header As FileHeader\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert einen Verweis auf ein FileHeader Objekt das die geladende Datei beschre\plain\f2\fs20\cf0 ibt.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb FileHeader\plain\f2\fs20\cf0\v FileHeader\plain\f2\fs20\cf0  Objekt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_Buffer}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Buffer}}\plain\f1\fs28\cf0\b FileEngine.Buffer\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Buffer As InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Response Eigenschaft gibt das Buffer Objekt zur\'fcck in dem die von der Festplatte geladende Da\plain\f2\fs20\cf0 tei jetzt im Arbeitsspeicher befindet.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb InetBuffer\plain\f2\fs20\cf0\v InetBuffer\plain\f2\fs20\cf0  f\'fcr weitere Informationen.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileEngine_State}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.State}}\plain\f1\fs28\cf0\b FileEngine.State\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .State As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft zeigt an in welchem Zustand sich das Objekt gerade befindet.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_IsNormal}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.IsNormal}}\plain\f1\fs28\cf0\b FileHeader.IsNormal\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .IsNormal As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann gezielt abgefragt werden. Ob es sich um eine "normale" Datei (Ohne gesetz\plain\f2\fs20\cf0 te Attribute) handelt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_IsReadonly}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.IsReadonly}}\plain\f1\fs28\cf0\b FileHeader.IsReadonly\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .IsReadonly As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann gezielt abgefragt werden. Ob das Readonly Attribut gesetzt ist oder nicht\plain\f2\fs20\cf0 , wenn das Attribut gesetzt ist kann auf die Datei nur noch mit Leseoperation Zugegriffen werden.\plain\f2\fs20\cf0  Schreiboperationen auf eine solche Datei w\'fcrden ein Laufzeitfehler erzeugen.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_IsArchive}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.IsArchive}}\plain\f1\fs28\cf0\b FileHeader.IsArchive\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .IsArchive As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann gezielt abgefragt werden. Ob das Archiv Attribut gesetzt ist oder nicht. \plain\f2\fs20\cf0 Wenn das Archiv Attribut gesetzt ist, ist dises Datei seit der letzten Sicherung ge\'e4ndert wurden.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_IsSystem}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.IsSystem}}\plain\f1\fs28\cf0\b FileHeader.IsSystem\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .IsSystem As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann gezielt abgefragt werden. Ob es sich bei der angeforderten Datei um eine \plain\f2\fs20\cf0 System Datei handelt, d.h. das System Attribut ist gesetzt und die Datei ist in der Regel eine wi\plain\f2\fs20\cf0 chtige Datei die zum Betriebsystem geh\'f6rt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_IsHidden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.IsHidden}}\plain\f1\fs28\cf0\b FileHeader.IsHidden\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .IsHidden As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode kann gezielt abgefragt werden. Ob das Hidden Attribut gesetzt ist oder nicht, \plain\f2\fs20\cf0 wenn das Attribut gesetzt ist wird die Datei auf dem Lokalen System beim Durchsuchen der Festplat\plain\f2\fs20\cf0 te nicht angezeigt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Length}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Length}}\plain\f1\fs28\cf0\b FileHeader.Length\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Length As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert die L\'e4nge der Datei die in den Speicher geladen wird.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Modified}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Modified}}\plain\f1\fs28\cf0\b FileHeader.Modified\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Modified As Date\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert das Datum an dem die angeforderte Datei das letzte mal ge\'e4ndert wurde.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Request}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Request}}\plain\f1\fs28\cf0\b FileHeader.Request\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Request As Date\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert das Datum an dem die Request Methode aufgerufen wurden ist und damit de\plain\f2\fs20\cf0 n Zeitpunkt an dem das Dokument angefordert wurden ist.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Message}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Message}}\plain\f1\fs28\cf0\b FileHeader.Message\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Message As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die Eigenschaft Message liefert ein Text, der den Statuscode beschreibt. Wenn der Statuscode = 20\plain\f2\fs20\cf0 0 ist liefert die Eigenschaft den Wert "OK" zur\'fcck, bei 404 = "Datei nicht gefunden" usw.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Status\plain\f2\fs20\cf0\v FileHeader_Status\plain\f2\fs20\cf0  (Statuscode).\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FileHeader_Status}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileHeader.Status}}\plain\f1\fs28\cf0\b FileHeader.Status\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FileHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Status As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den Status Code mit dem die letzt durchgef\'fchrte Aktion beendet wurde.\par
+\par
+\plain\f2\fs20\cf0 Es sind folgende Werte m\'f6glich:\par
+\plain\f2\fs20\cf0 0\tab Undefiniert\par
+\plain\f2\fs20\cf0 200\tab Erfolgreich beendet\par
+\plain\f2\fs20\cf0 404\tab Datei nicht gefunden\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Statuscodes entsprechen soweit es geht den des HTTP Protokolls\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy}}\plain\f1\fs28\cf0\b Inet32.InetProxy\par
+\plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v InetProxy_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v InetProxy_Beispiele>examples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.InetProxy\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Klasse verwaltet die Proxy Einstellungen. Die benutzt werden um ein Dokument \'fcber einen Pro\plain\f2\fs20\cf0 xy Server anzufordern. In der Regel sind alle Eigenschaften Schreibgesch\'fctzt w\'e4hrend ein Dokument\plain\f2\fs20\cf0  \'fcber ein InetEngine, HttpEngine, usw. angefordert wird. Proxy Server werden h\'e4ufig in Intranets \plain\f2\fs20\cf0 verwendet um das Netzwerk vor ungewollten Zugriffen von au\'dfen zu sch\'fctzen.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch InetEngine\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Access\plain\f2\fs20\cf0\v InetProxy_Access\plain\par
+\plain\f2\fs20\cf0\uldb Domain\plain\f2\fs20\cf0\v InetProxy_Domain\plain\par
+\plain\f2\fs20\cf0\uldb Override\plain\f2\fs20\cf0\v InetProxy_Override\plain\par
+\plain\f2\fs20\cf0\uldb Password\plain\f2\fs20\cf0\v InetProxy_Password\plain\par
+\plain\f2\fs20\cf0\uldb Port\plain\f2\fs20\cf0\v InetProxy_Port\plain\par
+\plain\f2\fs20\cf0\uldb Server\plain\f2\fs20\cf0\v InetProxy_Server\plain\par
+\plain\f2\fs20\cf0\uldb Username\plain\f2\fs20\cf0\v InetProxy_Username\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Beispiele}}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Domain}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Domain}}\plain\f1\fs28\cf0\b InetProxy.Domain\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Domain As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. Sie bestimmt die Do\plain\f2\fs20\cf0 m\'e4ne an der der Benutzer mit seinem Kennwort autorisiert wird. In manchen F\'e4llen ist es nicht not\plain\f2\fs20\cf0 wendig diese Eigenschaft zu setzen, z.B. wenn die Autorisierung mit dem "Basic" Autorisierungs Sc\plain\f2\fs20\cf0 hema durchgef\'fchrt wird (weitere Informationen zu Autorisierungs Schemen finden Sie in den RFCs \'fcb\plain\f2\fs20\cf0 er HTTP), dann wird kein Dom\'e4n Server benutzt, weil die Autoriserung direkt auf dem Proxy Server \plain\f2\fs20\cf0 statt findet, wird dir Autorisierung \'fcber das NTLM (Windows NT LanManager) Schema durchgef\'fchrt, m\plain\f2\fs20\cf0 uss die Domain Eigenschaft gesetzt sein, ansonsten wird ein Laufzeitfehler ausgel\'f6st.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Der String kann auch ein Benutzernamen enthalten, der wird von der Eigenschaft ignoriert und nur \plain\f2\fs20\cf0 die Dom\'e4nen Informationen in das Objekt \'fcbernommen. Solche Strings haben folgenden Aufbau: 'domai\plain\f2\fs20\cf0 n\\username'.\par
+\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Username\plain\f2\fs20\cf0\v InetProxy_Username\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Password}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Password}}\plain\f1\fs28\cf0\b InetProxy.Password\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy_Password\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Password As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. Diese Eigenschaft l\plain\f2\fs20\cf0 egt das Kennwort fest mit dem der Benutzer Autorisiert wird.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Port}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Port}}\plain\f1\fs28\cf0\b InetProxy.Port\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Port As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. Mit der Port Eigens\plain\f2\fs20\cf0 chaft, wird der Port festgelegt, mit dem man sich die Anwendung w\'e4hrend einer Anforderung verbind\plain\f2\fs20\cf0 et.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft \plain\f2\fs20\cf0\b muss\plain\f2\fs20\cf0  gesetzt werden, wenn ein Proxy Server verwendet wird, ansonsten wird ein L\plain\f2\fs20\cf0 aufzeitfehler ausgel\'f6st.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Username}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Username}}\plain\f1\fs28\cf0\b InetProxy.Username\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Username As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. Sie bestimmt den Be\plain\f2\fs20\cf0 nutzernamen der f\'fcr die Autorisierung verwendet wird.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Der Benutzername kann auch ein Dom\'e4nen Anteil haben, es wird nur der Benutzerteil \'fcbernommen, der\plain\f2\fs20\cf0  Dom\'e4nen Teil wird ignoriert. Solche Strings sind wie folgt aufgebaut: 'domain\\username'.\par
+\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Domain\plain\f2\fs20\cf0\v InetProxy_Domain\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Server}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Server}}\plain\f1\fs28\cf0\b InetProxy.Server\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Host As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. Mit dieser Eigensch\plain\f2\fs20\cf0 aft kann man den Proxy Server Namen festlegen. Der Name kann ein DNS Name (Domain Name Service) o\plain\f2\fs20\cf0 der eine IP-Adresse sein.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Es kann auch gleich der Port mit dieser Eigenschaft gesetzt werden, indem man an den Namen, getre\plain\f2\fs20\cf0 nnt durch ':' noch den Port h\'e4ngt z.B. 'proxy.localnet.de:8080' dann w\'e4re der Proxy Server 'proxy\plain\f2\fs20\cf0 .localnet.de' und der Port w\'e4re '8080'.\par
+\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Port\plain\f2\fs20\cf0\v InetProxy_Port\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetBuffer_SaveFile}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.SaveFile}}\plain\f1\fs28\cf0\b InetBuffer.SaveFile\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetBuffer\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .SaveFile FileName As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Speichert den gesammten Buffer Inhalt in eine Datei.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 FileName\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String, der den Dateinamen, der Datei enth\'e4lt in den die Buffer Daten geschrieben werden sollen.\cell\row
+}\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Diese Operationen kann bei gr\'f6\'dferen Buffer etwas l\'e4ngere Zeit in Anspruch nehmen.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb DocType\plain\f2\fs20\cf0\v HttpHeader_DocType\plain\par
+\plain\f2\fs20\cf0\uldb ETag\plain\f2\fs20\cf0\v HttpHeader_ETag\plain\par
+\plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v HttpHeader_Header\plain\par
+\plain\f2\fs20\cf0\uldb Length\plain\f2\fs20\cf0\v HttpHeader_Length\plain\par
+\plain\f2\fs20\cf0\uldb Message\plain\f2\fs20\cf0\v HttpHeader_Message\plain\par
+\plain\f2\fs20\cf0\uldb Modified\plain\f2\fs20\cf0\v HttpHeader_Modified\plain\par
+\plain\f2\fs20\cf0\uldb Protocol\plain\f2\fs20\cf0\v HttpHeader_Protocol\plain\par
+\plain\f2\fs20\cf0\uldb Proxy\plain\f2\fs20\cf0\v HttpHeader_Proxy\plain\par
+\plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v HttpHeader_Request\plain\par
+\plain\f2\fs20\cf0\uldb Resource\plain\f2\fs20\cf0\v HttpHeader_Resource\plain\par
+\plain\f2\fs20\cf0\uldb Server\plain\f2\fs20\cf0\v HttpHeader_Server\plain\par
+\plain\f2\fs20\cf0\uldb Status\plain\f2\fs20\cf0\v HttpHeader_Status\plain\par
+\plain\f2\fs20\cf0\uldb Version\plain\f2\fs20\cf0\v HttpHeader_Version\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Beispiele}}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Length}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Length}}\plain\f1\fs28\cf0\b HttpHeader.Length\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Length As Long\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft gibt die Menge der zuempfangenden Daten zur\'fcck. Wenn vom Server kein HTTP Heade\plain\f2\fs20\cf0 r Field 'ContentLength' geliefert wurde, gibt die Eigenschaft den Wert -1 zur\'fcck. Mit Hilfe diese\plain\f2\fs20\cf0 r Eigenschaft k\'f6nnen Sie z.B. Prozent Anzeigen erm\'f6glichen.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Protocol}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Protocol}}\plain\f1\fs28\cf0\b HttpHeader.Protocol\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Protocol As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert immer 'HTTP' zur\'fcck.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Version}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Version}}\plain\f1\fs28\cf0\b HttpHeader.Version\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Version As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert die HTTP Protokoll Version des Web Servers zur\'fcck, h\'e4ufige Werte sind: \plain\f2\fs20\cf0 'HTTP/1.0' und 'HTTP/1.1'.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Message}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Message}}\plain\f1\fs28\cf0\b HttpHeader.Message\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Message As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert die HTTP Status Message zur\'fcck. Bei Status Code 200 liefert diese Eigen\plain\f2\fs20\cf0 schaft meistens 'OK' zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Status\plain\f2\fs20\cf0\v HttpHeader_Status\plain\f2\fs20\cf0  Eigenschaft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Resource}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Resource}}\plain\f1\fs28\cf0\b HttpHeader.Resource\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Resource As InetURL\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Eigenschaft k\'f6nnen Sie die Resource (Dokument oder Objekt)  ermitteln das Sie angeford\plain\f2\fs20\cf0 ert haben. Die Eigenschaft liefert ein \plain\f2\fs20\cf0\uldb InetURL\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0  Objekt zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 In diesem Feld kann ein anderer Wert drin stehen, als der Wert den Sie bei der \plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v HttpEngine_\plain\f2\fs20\cf0\v OpenURL\plain\f2\fs20\cf0  Methode angegeben haben. Der Wert kann sich durch automatische Weiterleitung ver\'e4ndert ha\plain\f2\fs20\cf0 ben, weil das Dokument dann an einer anderen Stelle im Netzwerk angefordert wurden ist.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_DocType}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.DocType}}\plain\f1\fs28\cf0\b HttpHeader.DocType\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .DocType As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den HTTP Header 'ContentType' zur\'fcck, diese Eigenschaft bestimmt welche\plain\f2\fs20\cf0 n Typ die in der Antwort enthaltenden Daten haben. H\'e4ufig zur\'fcck gegebende Werte sind 'text/plain\plain\f2\fs20\cf0 ', 'text/html', 'image/gif' und 'image/jpeg'. F\'fcr weitere Information lesen Sie in der RFC 1945 n\plain\f2\fs20\cf0 ach.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_ETag}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.ETag}}\plain\f1\fs28\cf0\b HttpHeader.ETag\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .ETag As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den ETag Header des HTTP Protokolls zur\'fcck (soweit vom Server gesendet \plain\f2\fs20\cf0 wurde). Der ETag Header ist eine eindeutige Zeichenkette die zur Identifiezierung des zur\'fcckgegeb\plain\f2\fs20\cf0 eden HTTP Objektes (Dokument) verwendet werden kann.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Response\plain\f2\fs20\cf0\v HttpEngine_Buffer\plain\f2\fs20\cf0  Eigenschaft der \plain\f2\fs20\cf0\uldb HttpEngine\plain\f2\fs20\cf0\v HttpEngine\plain\f2\fs20\cf0  Objekte.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Header}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Header}}\plain\f1\fs28\cf0\b HttpHeader.Header\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Header As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den ungeparsten HTTP Header zur\'fcck, also so wie er vom Server empfangen\plain\f2\fs20\cf0  wurde.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 F\'fcr Informationen zum Aufbau von HTTP Header schlagen Sie in der RFC 1945 nach.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Modified}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Modified}}\plain\f1\fs28\cf0\b HttpHeader.Modified\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Modified As Date\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert das Datum am dem das angeforderte Dokument zum letzten mal ge\'e4ndert wur\plain\f2\fs20\cf0 den ist. Diese Eigenschaft liefert ein NULL Datum zur\'fcck wenn, wann der HTTP Header 'LastModified\plain\f2\fs20\cf0 ' nicht vom Server gesandt wurden ist. Das Datumsfeld wird von der Klasse automatisch in den VB D\plain\f2\fs20\cf0 atentyp Date umgewandelt und zur\'fcck gegeben.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Request}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Request}}\plain\f1\fs28\cf0\b HttpHeader.Request\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Request As Date\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft gibt das Datum und die Uhrzeit, an dem das \plain\f2\fs20\cf0\uldb HttpEngine\plain\f2\fs20\cf0\v HttpEngine\plain\f2\fs20\cf0  Objekt, einen A\plain\f2\fs20\cf0 nforderung gestartet hat zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb Request\plain\f2\fs20\cf0\v HttpEngine_Requesting\plain\f2\fs20\cf0  Methode der \plain\f2\fs20\cf0\uldb HttpEngine\plain\f2\fs20\cf0\v HttpEngine\plain\f2\fs20\cf0  Objekte.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Proxy}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Proxy}}\plain\f1\fs28\cf0\b HttpHeader.Proxy\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Proxy As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Eigenschaft k\'f6nnen Sie feststellen \'fcber welchen Proxy das Dokument empfangen wurde. Di\plain\f2\fs20\cf0 ese Eigenschaft liefert den Namen der Anwendung die als Proxy Server fungiert, dies kann z.B. 'MS\plain\f2\fs20\cf0  Proxy Plus 1.0 (Build 2000)' sein.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Server}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Server}}\plain\f1\fs28\cf0\b HttpHeader.Server\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Server As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den Namen der verwendeten HTTP Web Server Service Software zur\'fcck. H\'e4uf\plain\f2\fs20\cf0 ig zur\'fcckgelieferte Werte sind z.B. 'Netscape Enterprise', 'MS ISS/4.0' oder 'Apache'. Dieser Eig\plain\f2\fs20\cf0 enschaft ist nur gesetzt, wenn der Web Server ein 'Server' HTTP Headerfield sendet.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpHeader_Status}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpHeader.Status}}\plain\f1\fs28\cf0\b HttpHeader.Status\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpHeader\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Status As httpStates\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert den HTTP Status Code zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 F\'fcr die \plain\f2\fs20\cf0\i Definition der HTTP Status Codes\plain\f2\fs20\cf0  siehe RFC 1945.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Complete}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Complete}}\plain\f1\fs28\cf0\b HttpEngine.Complete\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Complete()\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereignis signalisiert das erfolgreiche Ende einer Anforderung falls ein Fehler aufgetreten\plain\f2\fs20\cf0  ist oder die Operation durch den Benutzer abgebrochen wurden ist wird das \plain\f2\fs20\cf0\uldb Error\plain\f2\fs20\cf0\v HttpEngine_Error\plain\f2\fs20\cf0  \plain\f2\fs20\cf0 Ereignis ausgel\'f6st.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Progress}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Progress}}\plain\f1\fs28\cf0\b HttpEngine.Progress\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Progress(ByVal bytesReceived As Long, ByVal bytesTotal As Long)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereignis signalisiert das wieder neue Pakete empfangen wurden. Aber die Anforderung noch n\plain\f2\fs20\cf0 icht vollst\'e4ndig ist. Mit diesem Ereignis kann man z.B. eine Fortschrittsanzeige realisieren.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 bytesReceived\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Long Wert, der die Anzahl der empfangenden Bytes enth\'e4lt\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 bytesTotal\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Long Wert, der die Anzahl die gesammte Gr\'f6\'dfe der Anforderung enth\'e4lt, wenn die gesammte Gr\'f6\'dfe\plain\f2\fs20\cf0  nicht feststeht, enth\'e4lt diese Variable ein Wert von -1\cell\row
+}\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Requesting}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Requesting}}\plain\f1\fs28\cf0\b HttpEngine.Request\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt_\plain\f2\fs20\cf0 Requesting(ByVal Methode As String, ByVal Resource As InetURL)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereigniss tritt immer dann ein wenn ein Dokument neu angefordert wird. Bei einer Weiterlei\plain\f2\fs20\cf0 tung zu einem anderen Dokument oder durch Autorisierung Vorg\'e4nge auf einem Web Server kann dieses\plain\f2\fs20\cf0  Ereignis h\'e4ufiger als einmal auftretren.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Methode\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String, der die Methode angibt wie ein Dokument angefordert wird. Folgende Werte sind m\'f6glich\plain\f2\fs20\cf0 : 'GET' und 'HEAD'.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Resource\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein InetURL Objekt, welches die URL des anzufordenden Dokuments enth\'e4lt.\cell\row
+}\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Timeout}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Timeout}}\plain\f1\fs28\cf0\b HttpEngine.Timeout\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Timeout As InetTimeout\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert ein InetTimeout zur\'fcck oder kann es durch die Benutzung der Set Anweisu\plain\f2\fs20\cf0 ng referenzieren. Die Eigenschaften des InetTimeout Objektes definieren die Timeout Zeiten (d.h. \plain\f2\fs20\cf0 die maximal zu wartenden Zeiten, bis eine Verbindung als unterbrochen angesehen wird).\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb InetTimeout\plain\f2\fs20\cf0\v InetTimeout\plain\f2\fs20\cf0  Klasse\plain\f4\fs20\cf0  \par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Methode}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Methode}}\plain\f1\fs28\cf0\b HttpEngine.Methode\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Methode As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Liefert ein String der die benutzte Methode zur Anforderung der Daten enth\'e4lt. Folgende Werte sin\plain\f2\fs20\cf0 d m\'f6glich: 'GET', 'HEAD'.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Methode mit der ein Dokument angefordert wird, k\'f6nnen Sie in der \plain\f2\fs20\cf0\uldb OpenURL\plain\f2\fs20\cf0\v HttpEngine_OpenURL\plain\f2\fs20\cf0  Me\plain\f2\fs20\cf0 thode \'fcbergeben.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Proxy}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Proxy}}\plain\f1\fs28\cf0\b HttpEngine.Proxy\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Proxy As InetProxy\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist w\'e4hrend einer Anforderung Schreibgesch\'fctzt. Die Eigenschaft liefert ein \plain\f2\fs20\cf0\uldb Ine\plain\f2\fs20\cf0\uldb tProxy\plain\f2\fs20\cf0\v InetProxy\plain\f2\fs20\cf0  Objekt zur\'fcck, welches Sie zum Setzen der Proxy Einstellungen benutzen k\'f6nnen. We\plain\f2\fs20\cf0 nn Sie die Set Anweisung k\'f6nnen Sie diese Eigenschaft auch ein solches Objekt referenzieren lasse\plain\f2\fs20\cf0 n.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Access}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Access}}\plain\f1\fs28\cf0\b InetProxy.Access\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Access As AccessConstants\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Eigenschaft kann man festlegen, wie der Proxy Server benutzt werden soll. Sie k\'f6nnen e\plain\f2\fs20\cf0 ine der folgenden Konstanten benutzen um das Objekt eine Access Eigenschaft zu zuweisen.\par
+\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 inetDirect\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Direkte Verbindung zu einem Server aufbauen. Kein Proxy Server verwenden.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 inetNamedProxy\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Den Proxy Server verwenden der durch die Eigenschaft \plain\f2\fs20\cf0\uldb Serve\plain\f2\fs20\cf0\v InetProxy_Server\plain\f2\fs20\cf0 r und \plain\f2\fs20\cf0\uldb Port\plain\f2\fs20\cf0\v InetProxy_Por\plain\f2\fs20\cf0\v t\plain\f2\fs20\cf0  definiert wird.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 inetDefault\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Bei dieser Zugriffsart werden die Proxy Einstellungen des Internet Exploreres verwendet in die Re\plain\f2\fs20\cf0 gistrierungs Eintr\'e4ge aus der Registrierungs Datenbank ausgelesen werden.\cell\row
+}\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in der Regel w\'e4hrend einer Anfoderung Schreibgesch\'fctzt. \par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Ein Proxy Server wird auch dann nicht benutzt wenn eine der Bedinungen in der Eigenschaft Overrid\plain\f2\fs20\cf0 e zutrifft.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} InetProxy_Override}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetProxy.Override}}\plain\f1\fs28\cf0\b InetProxy.Override\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v InetProxy\plain\par\pard
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Override As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft setzt eine Liste von Ausnahmen bei denen der Proxy Server bei bestimmten Anford\plain\f2\fs20\cf0 erung umgangen wird.\par
+\par
+\plain\f2\fs20\cf0\b Server Masken sind wie folgt aufgebaut\par
+\plain\f2\fs20\cf0\i Platzhalter vorne:\par
+\plain\f2\fs20\cf0 *.localnet.de\par
+\plain\f2\fs20\cf0 *.1.0\par
+\par
+\plain\f2\fs20\cf0\i Platzhalter hinten:\par
+\plain\f2\fs20\cf0 www.*\par
+\plain\f2\fs20\cf0 164.22.*\par
+\par
+\plain\f2\fs20\cf0\i Expliciter Name:\par
+\plain\f2\fs20\cf0 www.t-online.de\par
+\plain\f2\fs20\cf0 192.168.1.1\par
+\par
+\plain\f2\fs20\cf0\b Anmerkung zu den Platzhaltern\par
+\plain\f2\fs20\cf0 Ein Stern kann nur an erster Stelle oder an letzter Stelle im String stehen, ein Stern in der Mit\plain\f2\fs20\cf0 te oder mehr als ein Stern produzieren einen Laufzeit Fehler w\'e4hrend einer Anforderung.\par
+\par
+\plain\f2\fs20\cf0\b Server Liste\par
+\plain\f2\fs20\cf0 Es k\'f6nnen mehrere Server Masken \'fcbergeben werden, die durch ein Semikolon (";") getrennt sind.\par
+\plain\f2\fs20\cf0\i Objekt.Override = "*.localnet.de; www.t-online.de; www.mynet.*"\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft ist in Intranets die ihre Verbindung ins Internet \'fcber einen Proxy herstellen s\plain\f2\fs20\cf0 ehr sinnvoll.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic333}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FileEngine.Tag}}\plain\f1\fs28\cf0\b FileEngine.Tag\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v FileEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Tag As Variant\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Auf diese Eigenschaft k\'f6nnen Sie ein beliebiges Objekt oder Datentyp zuweisen. Diese Eigenschaft \plain\f2\fs20\cf0 dient nur zur Vereinfachung der Programmierung.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic334}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} InetBuffer.PeekData}}\plain\f1\fs28\cf0\b InetBuffer.PeekData\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v InetBuffer\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .GetData Data As String, [Length As Long]\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode f\'fcllt den Ausgabe Parameter Data mit Werten aus dem Buffer ohne sie im Buffer Objek\plain\f2\fs20\cf0 t zu l\'f6schen.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx1755\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Data\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String der mit Daten gef\'fcllt werden soll.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Length\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, ein Long Wert der die L\'e4nge der Daten bestimmt die kopiert werden sollen, wird kein Par\plain\f2\fs20\cf0 ameter angegeben, wird versucht alle Daten im Buffer zu kopieren.\cell\row
+}\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb GetData\plain\f2\fs20\cf0\v InetBuffer_GetData\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Resource}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Resource}}\plain\f1\fs28\cf0\b HttpEngine.Resource\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Resource As InetURL\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert die URL des Dokumentes welches angefordert wird bzw. angefordert werden\plain\f2\fs20\cf0  soll. Sie k\'f6nnen durch die Set Anweisung auch ein neues Objekt referenzieren. Die Anforderung ka\plain\f2\fs20\cf0 nn durch die \plain\f2\fs20\cf0\uldb OpenURL\plain\f2\fs20\cf0\v HttpEngine_OpenURL\plain\f2\fs20\cf0  Methode gestartet werden.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb InetURL\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0 .\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Connecting}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Connecting}}\plain\f1\fs28\cf0\b HttpEngine.Connecting\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Connecting(ByVal Proxy As String, ByVal Host As String)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Wenn dieses Ereignis ausgel\'f6st wird versucht das Objekt sich gerade mit einem Web Server zuverbin\plain\f2\fs20\cf0 den. Falls die Verbindung erfolgreich war wird das \plain\f2\fs20\cf0\uldb Connected\plain\f2\fs20\cf0\v HttpEngine_Connected\plain\f2\fs20\cf0  Ereignis ausgel\'f6\plain\f2\fs20\cf0 st ansonsten das \plain\f2\fs20\cf0\uldb Error\plain\f2\fs20\cf0\v HttpEngine_Error\plain\f2\fs20\cf0  Ereignis.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Proxy\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Falls die Verbindung \'fcber einen Proxy Server hergestellt wird, der Name des Proxy Servers, falls \plain\f2\fs20\cf0 die Verbindung ohne Proxy Server hergestellt wird ist dieser String = "".\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Host\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Der Hostname oder die IP Adresse des Web Server mit dem versucht wird sich zuverbinden.\cell\row
+}\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Die Namen der Server werden im Format \plain\f2\fs20\cf0\i <Hostname>:<Hostport>\plain\f2\fs20\cf0  \'fcbergeben.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Connected}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Connected}}\plain\f1\fs28\cf0\b HttpEngine.Connected\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Connected()\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Wenn dieses Ereignis eintritt ist die Verbindung zu einem Web Server erfolgreich aufgebaut. Nach \plain\f2\fs20\cf0 diesem Ereignis wird eine Anforderung (Request) zum Server geschickt.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_HeaderReceived}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.HeaderReceived}}\plain\f1\fs28\cf0\b HttpEngine.HeaderReceived\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _HeaderReceived()\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereignis signalisiert das vom Web Server ein HTTP Header empfangen wurde und ausgewertet w\plain\f2\fs20\cf0 urden ist. Der Header kann jetzt mit der \plain\f2\fs20\cf0\uldb Header\plain\f2\fs20\cf0\v HttpEngine_Header\plain\f2\fs20\cf0  Eigenschaft abgefragt werden.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Redirection}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Redirection}}\plain\f1\fs28\cf0\b HttpEngine.Redirection\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Redirection(ByVal FromUrl As InetURL, ToUrl As InetURL)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Das Redirection Ereignis wird durch eine automatische Weiterleitung ausgel\'f6st d.h. wenn ein Web S\plain\f2\fs20\cf0 erver dem Client mitteilt (Statuscode zwischen 300 und 399) das das Dokument nicht verf\'fcgbar ist \plain\f2\fs20\cf0 aber eine Stelle im Netzwerk angibt wo man es statt dessen Anfordern kann. Das Objekt probiert je\plain\f2\fs20\cf0 tzt automatisch das Dokument an der neuen Stelle anzufordern.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 FromUrl\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Die Urspr\'fcnfliche Adresse von der weitergeleitet wird.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 ToUrl\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Die neue Adresse zu der weitergeleitet wurden ist.\cell\row
+}\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Siehe auch \plain\f2\fs20\cf0\uldb InetUrl\plain\f2\fs20\cf0\v InetUrl\plain\f2\fs20\cf0 .\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} HttpEngine_Error}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} HttpEngine.Error}}\plain\f1\fs28\cf0\b HttpEngine.Error\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v HttpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 _Error(ByVal Number As Long, ByVal Reason As String)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Dieses Ereignis wird immer dann ausgel\'f6st wenn ein Fehler in der Hintergrundverarbeitung aufgetre\plain\f2\fs20\cf0 ten ist. Ebenso wird dieses Ereignis ausgel\'f6st falls eine Anforderung durch die Cancel Methode ab\plain\f2\fs20\cf0 gebrochen wurde.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2252\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8446\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Number\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Eine Zahl die den Fehlercode enth\'e4lt.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Reason\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein Text der den Grund des Fehler enth\'e4lt.\cell\row
+}\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Muster}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} Muster}}\plain\f1\fs28\cf0\b <Klasse>.<Element> Arial Black, 14Pkt. Fett\par
+\plain\f2\fs20\cf0 Betrifft <Sprungziel <Klasse> Courier 10Pkt. Normal>\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration  (Arial Black 10Pkt. Fett)\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .<Element>  (Bei Methoden oder Ereignissen) (Courier New 10Pkt. Normal)\par
+\plain\f2\fs20\cf0 Objekt_<Ereignis>  (Bei Ereignissen) (Courier New 10Pkt. Normal)\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Einige erkl\'e4rende Worte was diese(s) Methode, Eigenschaft oder Ereignis macht, signalisiert oder \plain\f2\fs20\cf0 darstellt.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Variable\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Erkl\'e4rung zur Variable.\cell\row
+}\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 Ein kleiner Kommentar. Hinweise zu weiterleitenden Dokumentationen.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine}}\plain\f1\fs28\cf0\b Inet32.FtpEngine\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FtpEngine_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FtpEngine_Eigenschaften\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\uldb Beispiele\plain\f2\fs20\cf0\v FtpEngine_Beispiele>exam\plain\f2\fs20\cf0\v ples\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.FtpEngine\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Schnittstelle k\'f6nnen FTP Operationen auf FTP Server ausgef\'fchrt werden, wie z.B. das We\plain\f2\fs20\cf0 chseln von Verzeichnissen, herauf- und runterladen von Dateien, Ansicht der Verzeichnisstrukturen\plain\f2\fs20\cf0 , Erstellung von Verzeichnissen, usw.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic344}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Connect}}\plain\f1\fs28\cf0\b FtpEngine.Connect\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Connect(Hostname As String, [Port As Integer]) As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode baut man eine Verbindung zu einem FTP Server auf. Nachdem die Verbindung aufge\plain\f2\fs20\cf0 baut ist k\'f6nnen mit der Execute Methode Befehle auf dem FTP Server abgesetzt werden. Falls bereit\plain\f2\fs20\cf0 s eine Verbindung besteht wird diese geschlossen. Wenn die Verbindung erfolgreich aufgebaut wurde\plain\f2\fs20\cf0  gibt die Methode \plain\f2\fs20\cf0\i True\plain\f2\fs20\cf0  zur\'fcck andernfalls \plain\f2\fs20\cf0\i False\plain\f2\fs20\cf0 .\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Hostname\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Eine IP Adresse oder ein Rechnername mit dem die Verbindung hergestellt werden soll.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Hostport\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, wenn dieser Parameter nicht angegeben wird wird Standard Port 21 verwendet. Geben Sie h\plain\f2\fs20\cf0 ier den TCP/IP Port an auf dem FTP Server auf Verbindungen wartet.\cell\row
+}\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Quit}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Quit}}\plain\f1\fs28\cf0\b FtpEngine.Bye\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Bye [Abort As Boolean]\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit der Methode Bye schlie\'dfen Sie eine FTP Verbindung die vorher mit Connect hergestellt wurde. D\plain\f2\fs20\cf0 iese Methode Loged den aktuell angemeldeten Benutzer aus und schlie\'dft dann die Verbindung.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Abort\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, Standard ist False\line Falls Abort = False ist wartet die Methode solange bis ein bestehend\plain\f2\fs20\cf0 er Datentransfer beendet ist. Bei True wird der Datentransport abgebrochen, der Benutzer ausgelog\plain\f2\fs20\cf0 t und die Verbindung getrennt.\cell\row
+}\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic347}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Hostname}}\plain\f1\fs28\cf0\b FtpEngine.Hostname\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Hostname As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Gibt den Rechnernamen bzw. die IP Adresse des Rechners zur\'fcck mit dem man gerade Verbunden ist. F\plain\f2\fs20\cf0 alls keine Verbindung besteht wird ein NULL String zur\'fcck gegeben.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic348}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Hostport}}\plain\f1\fs28\cf0\b FtpEngine.Hostport\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Hostport As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Eigenschaft liefert die Portnummer des FTP Servers mit der man sich verbunden hat.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic350}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.OpenUrl}}\plain\f1\fs28\cf0\b FtpEngine.OpenURL\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f0\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .OpenURL(Resource As InetURL, [Mode As FtpModes]) As InetBuffer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode wird ein Dokument von einem FtpServer heruntergeladen und in einem \plain\f2\fs20\cf0\uldb InetBuffer\plain\f2\fs20\cf0\v I\plain\f2\fs20\cf0\v netBuffer\plain\f2\fs20\cf0  Objekt zwischen gespeichert welches von der Methode zur\'fcck gegeben wird.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Resource\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Eine IP Adresse oder ein Rechnername mit dem die Verbindung hergestellt werden soll.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Mode\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, Gibt den Modus an mit dem das Dokument empfangen werden soll:\line ftpNoChange (aktuellen Tr\plain\f2\fs20\cf0 ansfer Mode verwenden),\line ftpAscii (Ascii Transfer Mode verwenden),\line ftpBinary (Binary Transfer Mode\plain\f2\fs20\cf0  verwenden),\line ftpAutomatic (Automatisch erkennung an Dateiende)\cell\row
+}\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb Connect\plain\f2\fs20\cf0\v Topic344\plain\par
+\plain\f2\fs20\cf0\uldb CdUp\plain\f2\fs20\cf0\v FtpEngine_CdUp\plain\par
+\plain\f2\fs20\cf0\uldb ChDir\plain\f2\fs20\cf0\v FtpEngine_ChDir\plain\par
+\plain\f2\fs20\cf0\uldb CurDir\plain\f2\fs20\cf0\v FtpEngine_CurDir\plain\par
+\plain\f2\fs20\cf0\uldb Dir\plain\f2\fs20\cf0\v FtpEngine_Dir\plain\par
+\plain\f2\fs20\cf0\uldb Exist\plain\f2\fs20\cf0\v FtpEngine\plain\par
+\plain\f2\fs20\cf0\uldb Kill\plain\f2\fs20\cf0\v FtpEngine_Kill\plain\par
+\plain\f2\fs20\cf0\uldb List\plain\f2\fs20\cf0\v FtpEngine_List\plain\par
+\plain\f2\fs20\cf0\uldb Login\plain\f2\fs20\cf0\v FtpEngine_Login\plain\par
+\plain\f2\fs20\cf0\uldb MkDir\plain\f2\fs20\cf0\v FtpEngine_MkDir\plain\par
+\plain\f2\fs20\cf0\uldb Name\plain\f2\fs20\cf0\v FtpEngine_Name\plain\par
+\plain\f2\fs20\cf0\uldb OpenURL\plain\f2\fs20\cf0\v Topic350\plain\par
+\plain\f2\fs20\cf0\uldb Quit\plain\f2\fs20\cf0\v FtpEngine_Quit\plain\par
+\plain\f2\fs20\cf0\uldb Receive\plain\f2\fs20\cf0\v FtpEngine_Receive\plain\par
+\plain\f2\fs20\cf0\uldb RmDir\plain\f2\fs20\cf0\v FtpEngine_RmDir\plain\par
+\plain\f2\fs20\cf0\uldb Store\plain\f2\fs20\cf0\v FtpEngine_Store\plain\par
+\plain\f2\fs20\cf0\uldb System\plain\f2\fs20\cf0\v FtpEngine_System\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Format\plain\f2\fs20\cf0\v FtpEngine_Format\plain\par
+\plain\f2\fs20\cf0\uldb Hostname\plain\f2\fs20\cf0\v Topic347\plain\par
+\plain\f2\fs20\cf0\uldb Hostport\plain\f2\fs20\cf0\v Topic348\plain\par
+\plain\f2\fs20\cf0\uldb Passive\plain\f2\fs20\cf0\v FtpEngine_Passive\plain\par
+\plain\f2\fs20\cf0\uldb Proxy\plain\f2\fs20\cf0\v Topic391\plain\par
+\plain\f2\fs20\cf0\uldb Timeout\plain\f2\fs20\cf0\v Topic390\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Beispiele}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Beispiele}}\plain\f0\fs20\cf0 FtpEngine Beispiele\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Login}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Login}}\plain\f1\fs28\cf0\b FtpEngine.Login\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Login(Username As String, Password As String) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Logt ein Benutzer auf dem Ftp Server ein. Dies sollte der erste Befehl sein der nach einer erfolg\plain\f2\fs20\cf0 reichen Verbindung zu einem Ftp Server geschickt werden sollte.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Username\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Loginname des Benutzers.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Password\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Kennwort des Benutzers.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Receive}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Receive}}\plain\f1\fs28\cf0\b FtpEngine.Receive\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Receive(ServerFile As String, LocalFile As Variant) As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode wird eine Datei von einem Ftp Server empfangen und auf der Festplatte speichert, di\plain\f2\fs20\cf0 e Datei kann auch in ein InetBuffer Objekt geladen werden. Die Methode liefert TRUE bei Erfolg zu\plain\f2\fs20\cf0 r\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 ServerFile\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String der den Dateinamen der zu empfangenden Datei auf dem Server enth\'e4lt.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 LocalFile\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Entweder ein String der den Dateinamen der lokalen Datei enth\'e4lt in der die empfangenden Daten ge\plain\f2\fs20\cf0 schrieben werden oder ein InetBuffer Objekt das mit den empfangenden Daten gef\'fcllt wird.\cell\row
+}\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Store}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Store}}\plain\f1\fs28\cf0\b FtpEngine.Store\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Store(LocalFile As Variant, ServerFile As String, [Mode As FtpModes]) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode kopiert eine lokale Datei oder den Inhalt eines InetBuffer Objektes auf einen Ftp S\plain\f2\fs20\cf0 erver und gibt den Replycode des Servers in Form eines FtpResponse Objektes zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 LocalFile\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String, der den Dateinamen einer lokalen Datei enth\'e4lt oder ein InetBuffer Objekt mit dem Dat\plain\f2\fs20\cf0 eiinhalt der zu einem Ftp Server gesendet werden soll.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 ServerFile\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Ein String, der den Dateinamen der zuschreibenden Datei auf dem Server enth\'e4lt. F\'fcr den Fall das \plain\f2\fs20\cf0 die Datei auf dem Server bereits existiert wird der Inhalt der Datei durch die neue Datei ersetzt\plain\f2\fs20\cf0 .\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Mode\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Wechselt den  Transfer Mode vor der Daten\'fcbertragung\line Folgende Werte sind m\'f6glich:\line ftpUnChanged (B\plain\f2\fs20\cf0 eh\'e4lt den aktuellen Tranfer Mode bei) (Standard)\line ftpAscii     (Wechselt vor dem Transfer in den A\plain\f2\fs20\cf0 scii Modus)\line ftpBinary    (Wechselt vor dem Transfer in den Binary Mod\cell\row
+}\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_List}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.List}}\plain\f1\fs28\cf0\b FtpEngine.List\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .List(Directory As String) As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode liefert eine Liste von Dateien in einem String. Die Datei Liste ist schon anzusehen\plain\f2\fs20\cf0  aber schwer maschinell zu interpretieren, da sie von System zu System unterschiedlich aufgebaut \plain\f2\fs20\cf0 ist.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Directory\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Absoluter oder relativer Verzeichnis Name mit oder ohne Dateimaske z.B. "\plain\f2\fs20\cf0\i /home/ich/*.txt\plain\f2\fs20\cf0 " w\'fcrde s\plain\f2\fs20\cf0 \'e4mtliche Text "*.txt" Dokumente in "\plain\f2\fs20\cf0\i /home/ich\plain\f2\fs20\cf0 " auflisten.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Dir}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Dir}}\plain\f1\fs28\cf0\b FtpEngine.Dir\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Dir([Directory As String]) As String()\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode liefert ein Array von Strings zur\'fcck die eine Liste mit Dateien enth\'e4lt die durch d\plain\f2\fs20\cf0 ie Maske in Directory angegeben wird.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Directory\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Optional, absoluter oder relativer Verzeichnis Name mit oder ohne Dateimaske z.B. "\plain\f2\fs20\cf0\i /homes/my/*.tx\plain\f2\fs20\cf0\i t\plain\f2\fs20\cf0 " liefert eine Liste s\'e4mtlicher "\plain\f2\fs20\cf0\i *.txt\plain\f2\fs20\cf0 " Dokumente. Falls der Parameter nicht angegeben wird, wer\plain\f2\fs20\cf0 den alle Dateien im aktuellen Verzeichnis zur\'fcckgegeben.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_CdUp}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.CdUp}}\plain\f1\fs28\cf0\b FtpEngine.CdUp\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .CdUp As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Wechselt in das \'fcbergeordnete Verzeichnis und gibt TRUE zur\'fcck, wenn die Operation erfolgreich war.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_ChDir}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.ChDir}}\plain\f1\fs28\cf0\b FtpEngine.ChDir\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .ChDir(Directory As String) As Boolean\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Wechselt in das Verzeichnis 'Directory' und gibt TRUE zur\'fcck, wenn die Operation erfolgreich war.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Directory\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Absoluter oder relativer Verzeichnisname auf dem Ftp Server. Die Verzeichnisformatierung ist von \plain\f2\fs20\cf0 Server zu Server unterschiedlich.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_MkDir}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.MkDir}}\plain\f1\fs28\cf0\b FtpEngine.MkDir\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .MkDir(Directory As String) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Mit dieser Methode wird ein neues Verzeichnis auf dem Ftp Server erstellt. Als R\'fcckgabewert f\'fcr d\plain\f2\fs20\cf0 er Replycode des Server in einem FtpResponse Objekt zur\'fcckgegeben.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Directory\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Absoluter oder Relativer Verzeichnisname des zu erstellenden Verzeichnisses.\cell\row
+}\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_RmDir}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.RmDir}}\plain\f1\fs28\cf0\b FtpEngine.RmDir\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .RmDir(Directory As String) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode l\'f6scht ein vorhandenden Verzeichnis auf dem Ftp Server und gibt den Reply des Serve\plain\f2\fs20\cf0 rs in Form eines FtpResponse Objektes an die Anwendung zur\'fcck.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Directory\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Absoluter oder Relativer Verzeichnisname des zu l\'f6schenden Verzeichnisses.\cell\row
+}\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_CurDir}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.CurDir}}\plain\f1\fs28\cf0\b FtpEngine.CurDir\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .CurDir() As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Gibt das aktuelle Verzeichnis auf dem Server zur\'fcck. Falls das Verzeichnis nicht ermittelt werden\plain\f2\fs20\cf0  konnte wird "" zur\'fcckgegeben.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Kill}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Kill}}\plain\f1\fs28\cf0\b FtpEngine.Kill\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Kill(Filename As String) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 L\'f6scht eine Datei auf dem Server und gibt den Replycode des Servers in Form eines FtpResponse Obj\plain\f2\fs20\cf0 ektes zur\'fcck\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Filename\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Absoluter oder relativer Dateiname, die auf dem Server gel\'f6scht werden soll.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Name}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Name}}\plain\f1\fs28\cf0\b FtpEngine.Name\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Name(OldName As String, NewName As String) As FtpResponse\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode bennent eine Datei auf dem Server um und zwar von '\plain\f2\fs20\cf0\i OldName\plain\f2\fs20\cf0 ' nach '\plain\f2\fs20\cf0\i NewName\plain\f2\fs20\cf0 ' als R\'fcck\plain\f2\fs20\cf0 gabewert wird der Reply Code des Servers in einem FtpResponse Objekt zur\'fcckgegeben.\par
+\par
+\plain\f1\fs20\cf0\b Parameter\par
+{\pard\trowd\trgaph57\trleft0\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx2261\clbrdrt\brdrs\clbrdrb\brdrs\clbrdrl\brdrs\clbrdrr\brdrs\brdrw0\brdrcf0\brdrdot\cellx8480\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 OldName\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Der Dateiname der Datei die um zubennen ist.\cell\row
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 NewName\cell
+\intbl \sb0\sl\sa0 \plain\f2\fs20\cf0 Der Dateiname den die umzubenennende Datei bekommen soll.\cell\row
+}\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_System}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.System}}\plain\f1\fs28\cf0\b FtpEngine.System\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .System() As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Liefert die Betriebsystems Kennung des Ftp Servers zur\'fcck, falls das Betriebsystem nicht ermittel\plain\f2\fs20\cf0 t werden kann wird ein Leer String ("") zur\'fcckgegeben.\par
+\par
+\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply}}\plain\f1\fs28\cf0\b Inet32.FtpReply\par
+\plain\f2\fs20\cf0\ul Methoden\plain\f2\fs20\cf0\v FtpReply_Methoden\plain\f2\fs20\cf0  \plain\f2\fs20\cf0\ul Eigenschaften\plain\f2\fs20\cf0\v FtpReply_Eigenschaften\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0 Inet32.FtpReply\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Die FtpReply Klasse verwaltet und analysiert die Replys die von FTP Servern zur\'fcckgesendet werden\plain\f2\fs20\cf0 . Auf jedes abgesetzte Kommando folgt ein Reply welches in Form eines FtpReply Objektes an die An\plain\f2\fs20\cf0 wendung zur\'fcckgegeben wird.\par
+\par
+\plain\f2\fs20\cf0 Ein Reply hat folgenden Aufbau: "nnn <sp> text" Eine dreistellige Zahl, ein Leerzeichen und danac\plain\f2\fs20\cf0 h ein Text der die Operation beschreibt.\par
+\par
+\plain\f1\fs20\cf0\b Anmerkung\par
+\plain\f2\fs20\cf0 F\'fcr eine genaue Definition des FTP Protokoll und dessen Replys schauen Sie doch bitte in der RFC \plain\f2\fs20\cf0 959 nach.\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_Methoden}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.Methoden}}\plain\f1\fs20\cf0\b Methoden\par
+\plain\f2\fs20\cf0\uldb MainState\plain\f2\fs20\cf0\v FtpReply_MainState\plain\par
+\plain\f2\fs20\cf0\uldb SubState\plain\f2\fs20\cf0\v FtpReply_SubState\plain\par
+\page \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_Eigenschaften}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.Eigenschaften}}\plain\f1\fs20\cf0\b Eigenschaften\par
+\plain\f2\fs20\cf0\uldb Message\plain\f2\fs20\cf0\v FtpReply_Message\plain\par
+\plain\f2\fs20\cf0\uldb Reply\plain\f2\fs20\cf0\v FtpReply_Reply\plain\par
+\plain\f2\fs20\cf0\uldb Status\plain\f2\fs20\cf0\v FtpReply_Status\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_Status}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.Status}}\plain\f1\fs28\cf0\b FtpReply.Status\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpReply\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Status As Integer\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Liefert nur den Statuscode eines Ftp Replys zur\'fcck. Dies w\'fcrde bei einem Reply von "\plain\f2\fs20\cf0\i 200 Operation\plain\f2\fs20\cf0\i  OK\plain\f2\fs20\cf0 " ein Statuscode von 200 bedeuten.\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_Reply}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.Reply}}\plain\f1\fs28\cf0\b FtpReply.Reply\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpReply\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Reply As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Liefert den gesammten Reply String des FTP Servers z.B. "\plain\f2\fs20\cf0\i 200 Operation OK\plain\f2\fs20\cf0 ".\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_Message}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.Message}}\plain\f1\fs28\cf0\b FtpReply.Message\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpReply\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Message As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Diese Methode liefert nur die Nachricht nicht den Statuscode eines Ftp Replys zur\'fcck. z.B. bei ei\plain\f2\fs20\cf0 nem Reply "\plain\f2\fs20\cf0\i 200 Operation OK\plain\f2\fs20\cf0 " w\'fcrde diese Methode nur "\plain\f2\fs20\cf0\i Operation OK\plain\f2\fs20\cf0 " zur\'fcckgeben\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic390}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Timeout}}\plain\f1\fs28\cf0\b FtpEngine.Timeout\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v Topic390\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} Topic391}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Proxy}}\plain\f1\fs28\cf0\b FtpEngine.Proxy\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\plain\f0\fs20\cf0 Proxy und Timeout Hilfe einf\'fcgen\par
+\plain\f0\fs20\cf0 Im Programm frmNetzwerk.PrepareObjekt auch f\'fcr Ftp\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_MainState}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.MainState}}\plain\f1\fs28\cf0\b FtpReply.MainState\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+\par
+\plain\f1\fs20\cf0\b Deklaration\par
+\plain\f2\fs20\cf0\i Objekt\plain\f2\fs20\cf0 .Reply As String\par
+\par
+\plain\f1\fs20\cf0\b Beschreibung\par
+\plain\f2\fs20\cf0 Liefert den gesammten Reply String des FTP Servers z.B. "\plain\f2\fs20\cf0\i 200 Operation OK\plain\f2\fs20\cf0 "\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpReply_SubState}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpReply.SubState}}\plain\f1\fs28\cf0\b FtpReply.SubState\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Passive}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Passive}}\plain\f1\fs28\cf0\b FtpEngine.Passive\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Format}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Format}}\plain\f1\fs28\cf0\b FtpEngine.Format\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par
+\page \keepn \plain\f0\fs20\cf0 {\cs16\super #{\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super #} FtpEngine_Exist}}\plain\f0\fs20\cf0 {\cs16\super ${\*\footnote \pard\plain \s15\widctlpar \f4\fs20 {\cs16\super $} FtpEngine.Exist}}\plain\f1\fs28\cf0\b FtpEngine.Exist\par
+\plain\f2\fs20\cf0\uldb Betrifft\plain\f2\fs20\cf0\v FtpEngine\plain\par\pard
+}
+}

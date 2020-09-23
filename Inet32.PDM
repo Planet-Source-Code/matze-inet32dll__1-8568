@@ -1,0 +1,72 @@
+[Root]
+Most Recent Package=DEP-Datei 1
+
+
+[Package|DEP-Datei 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=C:\TEMP\Inet32Dll
+
+[Package|DEP-Datei 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|DEP-Datei 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|DEP-Datei 1|Files Found]
+
+[Package|DEP-Datei 1|Files Released]
+security.dll=
+
+[Package|DEP-Datei 1|Missing Dependency Information]
+
+[Package|DEP-Datei 1|Out-of-Date Dependency Information]
+
+[Package|DEP-Datei 1|Files Added]
+
+[Package|DEP-Datei 1|Files Removed]
+
+[Package|DEP-Datei 1|Files In Project]
+C:\TEMP\Inet32Dll\Inet32.dll=Yes
+C:\WIN98\SYSTEM\MSVBVM60.DLL=Yes
+C:\WIN98\SYSTEM\OLEAUT32.DLL=Yes
+C:\WIN98\SYSTEM\Olepro32.dll=Yes
+C:\WIN98\SYSTEM\Asycfilt.dll=Yes
+C:\WIN98\SYSTEM\Stdole2.tlb=Yes
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WIN98\SYSTEM\VB6DE.DLL=Yes
+C:\WIN98\SYSTEM\MSWINSCK.OCX=Yes
+C:\WIN98\SYSTEM\WINSKDE.DLL=Yes
+
+[Package|DEP-Datei 1|Configure Registry Files]
+Applicable=
+
+[Package|DEP-Datei 1|Configure Remote Servers]
+Applicable=
+
+[Package|DEP-Datei 1|Install Locations]
+C:\TEMP\Inet32Dll\Inet32.dll=$(AppPath)
+C:\WIN98\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WIN98\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WIN98\SYSTEM\Olepro32.dll=$(WinSysPathSysFile)
+C:\WIN98\SYSTEM\Asycfilt.dll=$(WinSysPathSysFile)
+C:\WIN98\SYSTEM\Stdole2.tlb=$(WinSysPathSysFile)
+D:\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WIN98\SYSTEM\VB6DE.DLL=$(WinSysPath)
+C:\WIN98\SYSTEM\MSWINSCK.OCX=$(WinSysPath)
+C:\WIN98\SYSTEM\WINSKDE.DLL=$(WinSysPath)
+
+[Package|DEP-Datei 1|Configure Shared Files]
+Applicable=
+
+[Package|DEP-Datei 1|DepFile]
+DepCabFile=Inet32.CAB
+DepCabRun=Inet32.INF
+
+[Package|DEP-Datei 1|Package]
+PackageFolder=C:\TEMP\Inet32Dll
+ProjectFolder=C:\TEMP\Inet32Dll
+ServerSideCab=
+File1=C:\TEMP\Inet32Dll\Inet32.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

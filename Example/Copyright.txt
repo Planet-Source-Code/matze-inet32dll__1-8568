@@ -1,0 +1,14 @@
+COPYRIGHT
+=========
+
+ActiveX-Dll copyright (c) 2000 Matthias Luebben
+Examplecode copyright (c) 2000 Kai Poppe
+
+questions to the interface?
+e-mail: ml81@gmx.de
+
+questions to the example code?
+e-mail: Kai-Poppe@gmx.de
+
+p.s.
+Have a lot of fun...
