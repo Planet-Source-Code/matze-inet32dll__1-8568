@@ -1,0 +1,18 @@
+[Version]
+Version=1.0.0.0
+
+[Inet32.dll <0007>]
+Dest=$(AppPath)
+Date=16.05.00
+Time=15:11
+Version=1.0.0.0
+CABFilename=Inet32.CAB
+CABINFFile=Inet32.INF
+Uses1=MSVBVM60.DLL
+Uses2=OLEAUT32.DLL
+Uses3=Olepro32.dll
+Uses4=Asycfilt.dll
+Uses5=Stdole2.tlb
+Uses6=COMCAT.DLL
+Uses7=VB6DE.DLL
+Uses8=MSWINSCK.OCX
